@@ -1593,3 +1593,44 @@ kbd {
     max-height: 190px;
   }
 }
+
+.clue-bearing {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 11px;
+  padding-top: 9px;
+  border-top: 1px solid rgb(112 115 87 / 20%);
+}
+
+.compass-mark {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  place-items: center;
+  border: 1px solid #c2b58f;
+  border-radius: 50%;
+  background: #e8e1cd;
+  color: #78805f;
+  font-size: 19px;
+}
+
+.clue-bearing > span:last-child {
+  display: grid;
+  gap: 2px;
+}
+
+.bearing-label {
+  color: #777a62;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+#clue-direction {
+  color: #48533e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+}

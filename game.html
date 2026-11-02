@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#252b21">
-  <title>Whisperwood — The Windows Story Trail</title>
+  <title>Whisperwood — Windows Volcano Scroll Hunt</title>
   <link rel="stylesheet" href="style.css">
   <script src="game.js" defer></script>
 </head>
@@ -15,7 +15,7 @@
         <span class="brand-icon" aria-hidden="true">✧</span>
         <span>WHISPER<span class="brand-accent">WOOD</span></span>
       </a>
-      <div class="top-note"><span class="live-dot"></span> A storybook scavenger hunt</div>
+      <div class="top-note"><span class="live-dot"></span> A storybook scroll hunt</div>
       <div class="top-actions">
         <button class="icon-button fullscreen-button" id="fullscreen-button" type="button"
           aria-label="Enter fullscreen" title="Enter fullscreen"><span aria-hidden="true">⛶</span></button>
@@ -27,16 +27,16 @@
       <div class="world-column">
         <div class="world-heading">
           <div>
-            <p class="eyebrow">FOLLOW THE HIDDEN TRAIL</p>
-            <h1>Windows <span>Story Trail</span></h1>
+            <p class="eyebrow">HUNT THE MISSING SCROLLS</p>
+            <h1>Windows <span>Scroll Hunt</span></h1>
           </div>
-          <div class="world-badge"><span aria-hidden="true">✦</span> 14 FIELD NOTES · 9 PERKS</div>
+          <div class="world-badge"><span aria-hidden="true">✦</span> 14 SCROLLS · 9 PERKS</div>
         </div>
 
         <div class="world-frame">
           <div class="world-caption">
-            <span><span class="live-dot"></span> WHISPERWOOD</span>
-            <span class="coordinate-readout" id="location-label">The fern shore</span>
+            <span><span class="live-dot"></span> EMBERCROWN ISLE</span>
+            <span class="coordinate-readout" id="location-label">North slope</span>
           </div>
           <div class="map-tools" aria-label="Map zoom controls">
             <button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
@@ -44,9 +44,9 @@
             <button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
           </div>
           <canvas id="island-map" width="1376" height="544"
-            aria-label="Illustrated woodland island. Use WASD or arrow keys to explore and find the current clue."></canvas>
+            aria-label="Illustrated island surrounding a large volcano. Find the active scroll, using the journal's compass bearing."></canvas>
           <div class="map-tip" id="map-tip">
-            <span class="tip-key">E</span> examine clue
+            <span class="tip-key">E</span> read scroll
             <span class="tip-separator">·</span>
             <span class="tip-key">W A S D</span> wander
           </div>
@@ -59,9 +59,9 @@
             <button type="button" class="move-button move-down" data-move="ArrowDown" aria-label="Move down">↓</button>
             <button type="button" class="move-button move-right" data-move="ArrowRight" aria-label="Move right">→</button>
           </div>
-          <p>WASD / arrows to wander <span>·</span> E to examine</p>
+          <p>WASD / arrows to explore <span>·</span> E to read</p>
           <button type="button" class="interact-button" id="interact-button">
-            <span aria-hidden="true">✧</span> Examine <kbd>E</kbd>
+            <span aria-hidden="true">✧</span> Read scroll <kbd>E</kbd>
           </button>
         </div>
       </div>
@@ -69,11 +69,11 @@
       <aside class="quest-panel" aria-label="Explorer's field journal">
         <div class="panel-title">
           <div class="panel-icon" aria-hidden="true">✎</div>
-          <div><p class="eyebrow">FIELD JOURNAL</p><h2>Trail notes</h2></div>
+          <div><p class="eyebrow">FIELD JOURNAL</p><h2>Scroll journal</h2></div>
         </div>
 
         <section class="progress-card" aria-label="Game progress">
-          <div class="progress-line"><span>Field notes recovered</span><strong id="clue-count">0 / 14</strong></div>
+          <div class="progress-line"><span>Scrolls found</span><strong id="clue-count">0 / 14</strong></div>
           <div class="progress-track"><span id="clue-progress"></span></div>
           <div class="collectible-line">
             <span><span class="shell-icon" aria-hidden="true">✦</span> Windows 11 perks</span>
@@ -85,22 +85,26 @@
           </div>
         </section>
 
-        <section class="current-clue-card" aria-label="Current clue">
+        <section class="current-clue-card" aria-label="Current scroll and direction">
           <div class="current-clue-heading">
-            <span class="eyebrow">YOUR NEXT LEAD</span>
+            <span class="eyebrow">YOUR NEXT SCROLL</span>
             <span class="chapter-tag" id="chapter-tag">ORIGINS</span>
           </div>
-          <p id="current-clue">A message from the very first Windows waits among the old roots.</p>
+          <p id="current-clue">A faded screen glimmers among the ferns on the north side of the great crater.</p>
+          <div class="clue-bearing">
+            <span class="compass-mark" aria-hidden="true">✥</span>
+            <span><span class="bearing-label">GENERAL DIRECTION</span><strong id="clue-direction" aria-live="polite">SOUTH</strong></span>
+          </div>
         </section>
 
-        <section class="landmark-section" aria-label="Collected field notes">
-          <div class="section-heading"><h3>Collected notes</h3><span id="archive-count">0 FOUND</span></div>
+        <section class="landmark-section" aria-label="Collected scrolls">
+          <div class="section-heading"><h3>Collected scrolls</h3><span id="archive-count">0 FOUND</span></div>
           <ol class="landmark-list" id="landmark-list"></ol>
         </section>
 
         <div class="buddy-card">
           <div class="buddy-avatar" aria-hidden="true">✧</div>
-          <div><strong>Mori the moth</strong><p>Ask for a gentle trail reminder.</p></div>
+          <div><strong>Mori the moth</strong><p>Ask for a gentle scroll-search hint.</p></div>
           <span class="buddy-sparkle" aria-hidden="true">✦</span>
         </div>
 
@@ -109,14 +113,14 @@
         </p>
       </aside>
     </section>
-    <footer class="footer-note">A little history, hidden in the woods <span>✦</span> Made for curious explorers.</footer>
+    <footer class="footer-note">Circle the volcano, uncover Windows history <span>✦</span> Made for curious explorers.</footer>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <div class="modal-backdrop" id="modal-backdrop" hidden>
       <section class="game-modal" id="game-modal" role="dialog" aria-modal="true"
         aria-labelledby="modal-title" aria-describedby="modal-description">
         <button class="modal-close" id="modal-close" type="button" aria-label="Close">×</button>
         <div class="modal-art" id="modal-art" aria-hidden="true">✧</div>
-        <p class="eyebrow" id="modal-eyebrow">FIELD NOTE</p>
+        <p class="eyebrow" id="modal-eyebrow">SCROLL FOUND</p>
         <h2 id="modal-title"></h2>
         <p class="modal-description" id="modal-description"></p>
         <div class="try-card" id="try-card" hidden><strong>Keep this in mind</strong><span id="try-text"></span></div>
