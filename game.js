@@ -2,8 +2,7 @@ const HISTORY_STEPS = [
   {
     type: "history",
     name: "The very first window",
-    position: [4, 17],
-    clue: "Look for an old glass screen where the shore path meets a fallen log.",
+    clue: "A faded screen glimmers among the north-side ferns, near a fallen log.",
     description: "Windows 1.0 launched in November 1985. It gave MS-DOS computers a graphical environment with windows, menus, icons, and mouse support.",
     takeaway: "The first Windows was a graphical environment that ran on top of MS-DOS.",
     question: "What did Windows 1.0 run on top of?",
@@ -14,8 +13,7 @@ const HISTORY_STEPS = [
   {
     type: "history",
     name: "A button to begin",
-    position: [12, 10],
-    clue: "A little square keepsake is hidden beside the old stump below the path.",
+    clue: "A little square keepsake is tucked near a weathered stump and warm stones.",
     description: "Windows 95 arrived in August 1995. Its Start menu and taskbar gave people a new, familiar way to open programs and switch between them.",
     takeaway: "Windows 95 introduced the Start menu and taskbar.",
     question: "Which familiar tools arrived with Windows 95?",
@@ -26,8 +24,7 @@ const HISTORY_STEPS = [
   {
     type: "history",
     name: "The blue-sky years",
-    position: [20, 22],
-    clue: "Look near the three pale mushrooms just above the path.",
+    clue: "Three pale mushrooms mark a quiet spot among the volcanic rocks.",
     description: "Windows XP launched in 2001. It brought the Windows NT foundation to home PCs as well as work PCs, with a bright new look and a more stable base.",
     takeaway: "Windows XP brought home and work editions together on the Windows NT foundation.",
     question: "What important foundation did Windows XP use?",
@@ -38,8 +35,7 @@ const HISTORY_STEPS = [
   {
     type: "history",
     name: "A new start, again",
-    position: [28, 10],
-    clue: "A new-start note is tucked beside a broken stone arch above the trail.",
+    clue: "A new-start note is hidden near a broken stone arch.",
     description: "Windows 10 launched in July 2015. It brought back the Start menu after Windows 8 and continued Microsoft's move toward regular feature updates.",
     takeaway: "Windows 10 launched in 2015 and brought back the Start menu.",
     question: "When did Windows 10 launch?",
@@ -50,8 +46,7 @@ const HISTORY_STEPS = [
   {
     type: "history",
     name: "A window onto today",
-    position: [36, 22],
-    clue: "A pale-blue glint is waiting beside the weathered standing stone.",
+    clue: "A pale-blue glint waits beside an old standing stone.",
     description: "Windows 11 first became available on October 5, 2021. Its refreshed design brought a centered Start menu, new window layouts, and more ways to personalize a PC.",
     takeaway: "Windows 11's first release was October 5, 2021.",
     question: "When did Windows 11 first become available?",
@@ -64,8 +59,7 @@ const HISTORY_STEPS = [
 const FEATURES = [
   {
     name: "A fresh Start",
-    position: [44, 10],
-    clue: "Look for a tiny four-pane window beside the old log above the path.",
+    clue: "A tiny four-pane window is hidden near a fallen log by the foothills.",
     description: "Windows 11 redesigned Start and the taskbar, centering the app icons and giving Start a simpler pinned-apps and recommendations layout.",
     takeaway: "Start and the taskbar have a refreshed, centered design.",
     tryIt: "Open Start or visit Settings > Personalization > Taskbar.",
@@ -81,8 +75,7 @@ const FEATURES = [
   },
   {
     name: "Snap Layouts",
-    position: [52, 22],
-    clue: "A little window-shaped note is tucked beside the old stump below the path.",
+    clue: "Look for a window-shaped note near a mossy stump.",
     description: "Snap Layouts make it easier to arrange several apps side by side using ready-made window arrangements.",
     takeaway: "Snap Layouts arrange open apps into ready-made layouts.",
     tryIt: "Hover over a window's maximize button, or press Windows+Z.",
@@ -98,8 +91,7 @@ const FEATURES = [
   },
   {
     name: "Widgets",
-    position: [60, 10],
-    clue: "Search near the three pale mushrooms above the path for a weather mark.",
+    clue: "A weather mark is tucked near a cluster of pale mushrooms.",
     description: "The Windows 11 Widgets board gathers glanceable information, such as weather and news, in a personalized panel. Windows 10 had a different News and interests experience.",
     takeaway: "Widgets bring glanceable, personalized information together in one board.",
     tryIt: "Open Widgets from the taskbar or press Windows+W.",
@@ -115,8 +107,7 @@ const FEATURES = [
   },
   {
     name: "File Explorer tabs",
-    position: [68, 22],
-    clue: "A folded page is waiting beside the broken stone wall below the path.",
+    clue: "A folded page rests beside the broken basalt wall.",
     description: "File Explorer tabs let you keep multiple folders in one window instead of opening a separate window for every folder.",
     takeaway: "Tabs let you browse several folders in one File Explorer window.",
     tryIt: "Open File Explorer and select the + button to add a tab.",
@@ -132,8 +123,7 @@ const FEATURES = [
   },
   {
     name: "Focus sessions",
-    position: [76, 10],
-    clue: "A small clock face is hidden beside the standing stone above the path.",
+    clue: "A small clock face is hidden among the standing stones.",
     description: "Focus sessions in the Clock app give you a timed work session and can help reduce distractions.",
     takeaway: "The Clock app includes timed Focus sessions.",
     tryIt: "Search for Clock, then open Focus sessions.",
@@ -144,8 +134,7 @@ const FEATURES = [
   },
   {
     name: "Voice Access",
-    position: [84, 22],
-    clue: "A quiet voice-shaped note rests beside the fallen log below the path.",
+    clue: "A quiet voice-shaped note rests near a fallen log.",
     description: "Voice Access lets you control your PC and dictate text with spoken commands. Language availability varies.",
     takeaway: "Voice Access can control a PC and dictate text with spoken commands.",
     tryIt: "Look under Settings > Accessibility > Speech.",
@@ -161,8 +150,7 @@ const FEATURES = [
   },
   {
     name: "Dynamic Lighting",
-    position: [92, 10],
-    clue: "A soft-colored spark waits beside the old stump above the path.",
+    clue: "A soft-colored spark is tucked near an old stump.",
     description: "For compatible accessories, Dynamic Lighting lets you manage supported RGB lighting from Windows settings.",
     takeaway: "Dynamic Lighting manages RGB lighting on compatible accessories.",
     tryIt: "Check Settings > Personalization > Dynamic Lighting.",
@@ -178,8 +166,7 @@ const FEATURES = [
   },
   {
     name: "Windows Studio Effects",
-    position: [100, 22],
-    clue: "A little camera note waits beside the three pale mushrooms below the trail.",
+    clue: "A little camera note is hidden among pale mushrooms.",
     description: "On supported hardware, Studio Effects can enhance video calls with effects such as background blur or automatic framing.",
     takeaway: "Studio Effects can improve video calls on supported PCs.",
     tryIt: "On supported PCs, look in Settings > Bluetooth & devices > Cameras.",
@@ -195,8 +182,7 @@ const FEATURES = [
   },
   {
     name: "Auto HDR",
-    position: [108, 10],
-    clue: "The final note glimmers beside a weathered stone arch near the far shore.",
+    clue: "The final scroll waits on the summit, above the volcano's crater.",
     description: "On a supported HDR display, Auto HDR can add richer color and brightness to some older games made for SDR.",
     takeaway: "Auto HDR enhances some older games on supported HDR displays.",
     tryIt: "Check Settings > System > Display > HDR.",
@@ -213,31 +199,49 @@ const FEATURES = [
 ].map((feature) => ({ ...feature, type: "perk" }));
 
 const QUEST_STEPS = [...HISTORY_STEPS, ...FEATURES];
-const MAP_WIDTH = 112;
-const MAP_HEIGHT = 32;
+const MAP_WIDTH = 72;
+const MAP_HEIGHT = 72;
 const TILE_SIZE = 48;
-const ZONE_WIDTH = 8;
-const GATE_Y = 16;
+const VOLCANO_CENTER = [36, 36];
+const VOLCANO_SUMMIT = [...VOLCANO_CENTER];
+const VOLCANO_RADIUS = 9;
+const ORBIT_RADIUS = 12;
+const ISLAND_RADIUS = 34;
+const SCROLL_INTERACTION_RADIUS = 3;
+const SCROLL_VISIBILITY_RADIUS = 4.8;
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 1.75;
 const ZOOM_STEP = 0.1;
-const START = [3, 16];
-const MORI_POSITION = [2, 15];
-const GLADE_NAMES = [
-  "The fern shore", "The old stump", "Bluebell hollow", "The green rise",
-  "The stone arch", "Birchlight glade", "The fern bend", "The weathered wall",
-  "Mushroom meadow", "The old footbridge", "The fallen log", "Mosslight rise",
-  "The stone steps", "The far lookout",
-];
+const START = [29, 28];
+const MORI_POSITION = [28, 27];
 const PROP_TYPES = ["fallen-log", "stump", "mushrooms", "ruin", "standing-stone"];
-const SCENE_PROPS = QUEST_STEPS.map((step, zone) => ({
-  position: [
-    zone * ZONE_WIDTH + (zone % 2 ? 2 : 6),
-    step.position[1] + (zone % 2 ? 2 : -2),
-  ],
-  type: PROP_TYPES[zone % PROP_TYPES.length],
+const ORBIT_SCROLL_COUNT = QUEST_STEPS.length - 1;
+
+function orbitPosition(index, radius = ORBIT_RADIUS) {
+  const angle = -Math.PI / 2 + (index / ORBIT_SCROLL_COUNT) * Math.PI * 2;
+  const variedRadius = radius + Math.sin(index * 2.1) * 0.65;
+  return [
+    Math.round(VOLCANO_CENTER[0] + Math.cos(angle) * variedRadius),
+    Math.round(VOLCANO_CENTER[1] + Math.sin(angle) * variedRadius),
+  ];
+}
+
+QUEST_STEPS.forEach((step, index) => {
+  step.position = index === QUEST_STEPS.length - 1
+    ? [...VOLCANO_SUMMIT]
+    : orbitPosition(index);
+});
+
+const SCENE_PROPS = QUEST_STEPS.slice(0, -1).map((step, index) => ({
+  position: orbitPosition(index, VOLCANO_RADIUS + 1.5),
+  type: PROP_TYPES[index % PROP_TYPES.length],
 }));
-const IMPORTANT_POSITIONS = [START, MORI_POSITION, ...QUEST_STEPS.map((step) => step.position)];
+const IMPORTANT_POSITIONS = [
+  START,
+  MORI_POSITION,
+  ...QUEST_STEPS.map((step) => step.position),
+  ...SCENE_PROPS.map((prop) => prop.position),
+];
 
 const canvas = document.querySelector("#island-map");
 const context = canvas.getContext("2d");
@@ -279,7 +283,7 @@ let guideChats = 0;
 let zoomLevel = 1.3;
 let lastMoveAt = 0;
 let lastFrameAt = 0;
-let lastGateToastAt = -Infinity;
+let lastVolcanoToastAt = -Infinity;
 let toastTimeout = 0;
 let canvasWidth = 0;
 let canvasHeight = 0;
@@ -291,8 +295,8 @@ function keyFor([x, y]) {
   return `${x},${y}`;
 }
 
-function positionIs(left, right) {
-  return left[0] === right[0] && left[1] === right[1];
+function distanceBetween(left, right) {
+  return Math.hypot(left[0] - right[0], left[1] - right[1]);
 }
 
 function terrainNoise(x, y, salt = 0) {
@@ -307,32 +311,33 @@ function isNearImportantPosition(x, y, radius = 2) {
 }
 
 function buildMap() {
+  const [centerX, centerY] = VOLCANO_CENTER;
   const tiles = Array.from({ length: MAP_HEIGHT }, (_, y) =>
     Array.from({ length: MAP_WIDTH }, (_, x) => {
-      if (x < 1 || x >= MAP_WIDTH - 1 || y < 1 || y >= MAP_HEIGHT - 1) return "water";
-      if (y <= 2 || y >= MAP_HEIGHT - 3) return "sand";
+      const islandDistance = Math.hypot(x - centerX, y - centerY);
+      const volcanoDistance = Math.hypot(x - centerX, (y - centerY) / 0.88);
+      if (islandDistance > ISLAND_RADIUS) return "water";
+      if (islandDistance > ISLAND_RADIUS - 3) return "sand";
+      if (volcanoDistance <= VOLCANO_RADIUS + 0.6) return "volcano";
       return "grass";
     }),
   );
   const trees = [];
   const rocks = [];
 
-  for (let y = 4; y < MAP_HEIGHT - 4; y += 1) {
+  for (let y = 2; y < MAP_HEIGHT - 2; y += 1) {
     for (let x = 2; x < MAP_WIDTH - 2; x += 1) {
       if (tiles[y][x] !== "grass" || isNearImportantPosition(x, y)) continue;
-      if (x % ZONE_WIDTH === 0) continue;
 
       const density = terrainNoise(x, y, 4);
-      const forestEdge = y <= 7 || y >= 24;
-      const zoneEdge = x % ZONE_WIDTH <= 1 || x % ZONE_WIDTH >= 7;
-      const forestLane = zoneEdge && ((y >= 9 && y <= 14) || (y >= 18 && y <= 23));
-      if ((forestEdge && density > 0.64) || (forestLane && density > 0.79)) {
+      const distanceFromCenter = Math.hypot(x - centerX, y - centerY);
+      const coastalForest = distanceFromCenter > ISLAND_RADIUS - 12;
+      const volcanoForest = distanceFromCenter > VOLCANO_RADIUS + 1.4
+        && distanceFromCenter < ORBIT_RADIUS + 2.5;
+      if ((coastalForest && density > 0.68) || (volcanoForest && density > 0.84)) {
         tiles[y][x] = "tree";
         trees.push([x, y]);
-      } else if ((y === 8 || y === 23) && density > 0.96) {
-        tiles[y][x] = "rock";
-        rocks.push([x, y]);
-      } else if (!forestEdge && density > 0.992 && Math.abs(y - GATE_Y) > 3) {
+      } else if (density > 0.985 && distanceFromCenter > VOLCANO_RADIUS + 2) {
         tiles[y][x] = "rock";
         rocks.push([x, y]);
       }
@@ -340,10 +345,10 @@ function buildMap() {
   }
 
   const brush = [];
-  for (let y = 8; y <= 23; y += 1) {
+  for (let y = 3; y < MAP_HEIGHT - 3; y += 1) {
     for (let x = 2; x < MAP_WIDTH - 2; x += 1) {
       if (tiles[y][x] !== "grass" || isNearImportantPosition(x, y, 1)) continue;
-      if (terrainNoise(x, y, 19) > 0.81) brush.push([x, y]);
+      if (terrainNoise(x, y, 19) > 0.9) brush.push([x, y]);
     }
   }
 
@@ -354,33 +359,30 @@ const TREE_POSITIONS = mapContent.trees;
 const ROCK_POSITIONS = mapContent.rocks;
 const BRUSH_POSITIONS = mapContent.brush;
 const MORI_DIALOGUE = [
-  "A field note is like a tiny window into the past. I like the ones with pictures.",
-  "The gate only opens after the current note is read and solved. No shortcuts through the brambles!",
-  "I saw a moth carrying a clue, but I think Mori was just showing off.",
-  "Fun fact: the Start menu is older than this very mossy stump.",
+  "The scrolls circle the volcano. Let the compass point you toward the next one.",
+  "I saw a scroll glimmer near the crater. I was too busy fluttering to read it.",
+  "Each scroll tells one small part of a very long Windows story.",
+  "The summit is steep. Find every scroll around the volcano before you climb.",
 ];
 
 function traceIsland(inset = 0) {
-  const left = (0.25 + inset) * TILE_SIZE;
-  const right = (MAP_WIDTH - 0.25 - inset) * TILE_SIZE;
-  const top = (1.15 + inset) * TILE_SIZE;
-  const bottom = (MAP_HEIGHT - 1.15 - inset) * TILE_SIZE;
-  const corner = 4.5 * TILE_SIZE;
-
   context.beginPath();
-  context.moveTo(left + corner, top);
-  context.bezierCurveTo(left + 15 * TILE_SIZE, top - 0.45 * TILE_SIZE, left + 22 * TILE_SIZE, top + 0.42 * TILE_SIZE, left + 34 * TILE_SIZE, top);
-  context.bezierCurveTo(left + 47 * TILE_SIZE, top + 0.28 * TILE_SIZE, left + 54 * TILE_SIZE, top - 0.3 * TILE_SIZE, left + 67 * TILE_SIZE, top);
-  context.bezierCurveTo(left + 82 * TILE_SIZE, top - 0.25 * TILE_SIZE, right - 16 * TILE_SIZE, top + 0.42 * TILE_SIZE, right - corner, top);
-  context.quadraticCurveTo(right, top, right, top + corner);
-  context.lineTo(right, bottom - corner);
-  context.quadraticCurveTo(right, bottom, right - corner, bottom);
-  context.bezierCurveTo(right - 18 * TILE_SIZE, bottom + 0.38 * TILE_SIZE, left + 79 * TILE_SIZE, bottom - 0.38 * TILE_SIZE, left + 65 * TILE_SIZE, bottom);
-  context.bezierCurveTo(left + 49 * TILE_SIZE, bottom + 0.25 * TILE_SIZE, left + 43 * TILE_SIZE, bottom - 0.3 * TILE_SIZE, left + 29 * TILE_SIZE, bottom);
-  context.bezierCurveTo(left + 17 * TILE_SIZE, bottom + 0.38 * TILE_SIZE, left + 11 * TILE_SIZE, bottom - 0.3 * TILE_SIZE, left + corner, bottom);
-  context.quadraticCurveTo(left, bottom, left, bottom - corner);
-  context.lineTo(left, top + corner);
-  context.quadraticCurveTo(left, top, left + corner, top);
+  const centerX = (VOLCANO_CENTER[0] + 0.5) * TILE_SIZE;
+  const centerY = (VOLCANO_CENTER[1] + 0.5) * TILE_SIZE;
+  const radius = (ISLAND_RADIUS - inset) * TILE_SIZE;
+  const segments = 96;
+
+  for (let segment = 0; segment <= segments; segment += 1) {
+    const angle = (segment / segments) * Math.PI * 2;
+    const waviness = 1
+      + Math.sin(angle * 5 + 0.4) * 0.012
+      + Math.sin(angle * 9 + 1.7) * 0.007
+      + Math.sin(angle * 15 + 0.6) * 0.003;
+    const x = centerX + Math.cos(angle) * radius * waviness;
+    const y = centerY + Math.sin(angle) * radius * waviness;
+    if (segment === 0) context.moveTo(x, y);
+    else context.lineTo(x, y);
+  }
   context.closePath();
 }
 
@@ -421,6 +423,119 @@ function drawIsland() {
   context.restore();
 }
 
+function traceVolcanoLayer(centerX, centerY, radius, seed) {
+  const segments = 80;
+  context.beginPath();
+  for (let segment = 0; segment <= segments; segment += 1) {
+    const angle = (segment / segments) * Math.PI * 2;
+    const variation = 1
+      + Math.sin(angle * 4 + seed) * 0.035
+      + Math.sin(angle * 9 + seed * 1.7) * 0.018
+      + Math.sin(angle * 15 + seed * 2.1) * 0.008;
+    const x = centerX + Math.cos(angle) * radius * variation;
+    const y = centerY + Math.sin(angle) * radius * variation * 0.88;
+    if (segment === 0) context.moveTo(x, y);
+    else context.lineTo(x, y);
+  }
+  context.closePath();
+}
+
+function drawVolcano(time) {
+  const centerX = (VOLCANO_CENTER[0] + 0.5) * TILE_SIZE;
+  const centerY = (VOLCANO_CENTER[1] + 0.5) * TILE_SIZE;
+  const baseRadius = (VOLCANO_RADIUS + 0.7) * TILE_SIZE;
+  const shadow = context.createRadialGradient(
+    centerX + 25,
+    centerY + 45,
+    baseRadius * 0.45,
+    centerX + 25,
+    centerY + 45,
+    baseRadius * 1.24,
+  );
+  shadow.addColorStop(0, "rgb(43 49 39 / 38%)");
+  shadow.addColorStop(1, "rgb(43 49 39 / 0%)");
+  context.fillStyle = shadow;
+  context.beginPath();
+  context.ellipse(centerX + 25, centerY + 45, baseRadius * 1.24, baseRadius, 0, 0, Math.PI * 2);
+  context.fill();
+
+  traceVolcanoLayer(centerX, centerY, baseRadius, 0.8);
+  const lowerSlope = context.createLinearGradient(centerX - baseRadius, centerY - baseRadius, centerX + baseRadius, centerY + baseRadius);
+  lowerSlope.addColorStop(0, "#82765f");
+  lowerSlope.addColorStop(0.43, "#625a4c");
+  lowerSlope.addColorStop(1, "#4e4b43");
+  context.fillStyle = lowerSlope;
+  context.fill();
+  context.strokeStyle = "rgb(54 54 46 / 66%)";
+  context.lineWidth = 2;
+  context.stroke();
+
+  traceVolcanoLayer(centerX - 7, centerY - 5, baseRadius * 0.78, 1.9);
+  const middleSlope = context.createLinearGradient(centerX - baseRadius * 0.8, centerY - baseRadius * 0.7, centerX + baseRadius * 0.8, centerY + baseRadius * 0.65);
+  middleSlope.addColorStop(0, "#9a805e");
+  middleSlope.addColorStop(0.48, "#80694f");
+  middleSlope.addColorStop(1, "#665846");
+  context.fillStyle = middleSlope;
+  context.fill();
+  context.strokeStyle = "rgb(183 157 113 / 29%)";
+  context.lineWidth = 2;
+  context.stroke();
+
+  traceVolcanoLayer(centerX - 4, centerY - 10, baseRadius * 0.55, 3.2);
+  context.fillStyle = "#77624b";
+  context.fill();
+  context.strokeStyle = "rgb(196 166 119 / 29%)";
+  context.lineWidth = 1.6;
+  context.stroke();
+
+  traceVolcanoLayer(centerX - 2, centerY - 14, baseRadius * 0.31, 4.3);
+  context.fillStyle = "#655545";
+  context.fill();
+  context.strokeStyle = "rgb(194 164 116 / 34%)";
+  context.lineWidth = 1.4;
+  context.stroke();
+
+  context.strokeStyle = "rgb(61 54 45 / 51%)";
+  context.lineWidth = 2.2;
+  for (let ridge = 0; ridge < 7; ridge += 1) {
+    const angle = (ridge / 7) * Math.PI * 2 + 0.25;
+    const startRadius = baseRadius * (0.28 + terrainNoise(ridge, 0, 4) * 0.08);
+    const endRadius = baseRadius * (0.73 + terrainNoise(ridge, 0, 8) * 0.08);
+    context.beginPath();
+    context.moveTo(
+      centerX + Math.cos(angle) * startRadius,
+      centerY - 12 + Math.sin(angle) * startRadius * 0.84,
+    );
+    context.quadraticCurveTo(
+      centerX + Math.cos(angle + 0.12) * baseRadius * 0.56,
+      centerY + Math.sin(angle + 0.12) * baseRadius * 0.52,
+      centerX + Math.cos(angle) * endRadius,
+      centerY + Math.sin(angle) * endRadius * 0.84,
+    );
+    context.stroke();
+  }
+
+  const craterPulse = Math.sin(time / 650) * 0.08;
+  const crater = context.createRadialGradient(
+    centerX - 18,
+    centerY - 28,
+    2,
+    centerX,
+    centerY - 12,
+    baseRadius * 0.28,
+  );
+  crater.addColorStop(0, "#423e37");
+  crater.addColorStop(0.7, "#4b4137");
+  crater.addColorStop(1, `rgba(157, 91, 52, ${0.64 + craterPulse})`);
+  context.fillStyle = crater;
+  context.beginPath();
+  context.ellipse(centerX, centerY - 12, baseRadius * 0.27, baseRadius * 0.2, -0.08, 0, Math.PI * 2);
+  context.fill();
+  context.strokeStyle = "rgb(206 143 83 / 52%)";
+  context.lineWidth = 1.8;
+  context.stroke();
+}
+
 function drawWaterRipple(x, y, time) {
   const left = x * TILE_SIZE;
   const top = y * TILE_SIZE;
@@ -447,7 +562,7 @@ function drawTile(x, y, tile) {
   const top = y * TILE_SIZE;
   const variation = terrainNoise(x, y);
 
-  if (tile === "water") return;
+  if (tile === "water" || tile === "volcano") return;
   if (tile !== "sand") {
     for (let patch = 0; patch < 2; patch += 1) {
       const seed = terrainNoise(x, y, patch + 66);
@@ -754,134 +869,6 @@ function drawProp(prop) {
   }
 }
 
-function drawTrail(zone) {
-  const step = QUEST_STEPS[zone];
-  if (!step) return;
-  const startX = zone * ZONE_WIDTH;
-  const endX = startX + ZONE_WIDTH;
-  const [noteX, noteY] = step.position;
-
-  context.beginPath();
-  context.moveTo(startX * TILE_SIZE, GATE_Y * TILE_SIZE);
-  context.bezierCurveTo(
-    (startX + 2) * TILE_SIZE,
-    GATE_Y * TILE_SIZE,
-    (noteX - 2) * TILE_SIZE,
-    noteY * TILE_SIZE,
-    noteX * TILE_SIZE,
-    noteY * TILE_SIZE,
-  );
-  context.bezierCurveTo(
-    (noteX + 2) * TILE_SIZE,
-    noteY * TILE_SIZE,
-    (endX - 2) * TILE_SIZE,
-    GATE_Y * TILE_SIZE,
-    endX * TILE_SIZE,
-    GATE_Y * TILE_SIZE,
-  );
-
-  context.lineCap = "round";
-  context.lineJoin = "round";
-  context.strokeStyle = "rgb(64 72 51 / 25%)";
-  context.lineWidth = 0.58 * TILE_SIZE;
-  context.stroke();
-  context.strokeStyle = "#a18e6b";
-  context.lineWidth = 0.4 * TILE_SIZE;
-  context.stroke();
-  context.strokeStyle = "#c6b38a";
-  context.lineWidth = 0.25 * TILE_SIZE;
-  context.stroke();
-  context.strokeStyle = "rgb(246 231 192 / 20%)";
-  context.lineWidth = 1.4;
-  context.stroke();
-}
-
-function drawGateBush(x, y, variation) {
-  const centerX = x * TILE_SIZE;
-  const centerY = y * TILE_SIZE;
-  const shades = ["#4c694a", "#58754d", "#6a8055"];
-  context.fillStyle = "rgb(40 56 39 / 18%)";
-  context.beginPath();
-  context.ellipse(centerX, centerY + 11, 24, 8, 0, 0, Math.PI * 2);
-  context.fill();
-  for (let leaf = 0; leaf < 4; leaf += 1) {
-    const offsetX = (leaf - 1.5) * 11;
-    const offsetY = Math.sin(leaf * 2 + variation) * 5;
-    context.beginPath();
-    context.ellipse(centerX + offsetX, centerY + offsetY, 13, 11, 0.2 * leaf, 0, Math.PI * 2);
-    context.fillStyle = shades[(leaf + Math.floor(variation * 3)) % shades.length];
-    context.fill();
-  }
-}
-
-function drawGate(boundary, time) {
-  const gateX = boundary * ZONE_WIDTH;
-  const isOpen = boundary <= questIndex;
-  for (let y = 3; y <= MAP_HEIGHT - 3; y += 2) {
-    if (Math.abs(y - GATE_Y) <= 2.3) continue;
-    drawGateBush(gateX, y + Math.sin(time / 1500 + y) * 0.04, terrainNoise(boundary, y, 5));
-  }
-
-  const centerX = gateX * TILE_SIZE;
-  const centerY = GATE_Y * TILE_SIZE;
-  context.fillStyle = "rgb(42 53 38 / 26%)";
-  context.beginPath();
-  context.ellipse(centerX, centerY + 16, 24, 8, 0, 0, Math.PI * 2);
-  context.fill();
-
-  if (isOpen) {
-    context.strokeStyle = "#816c4c";
-    context.lineWidth = 4;
-    context.beginPath();
-    context.moveTo(centerX - 8, centerY + 16);
-    context.lineTo(centerX - 14, centerY - 22);
-    context.moveTo(centerX - 8, centerY - 2);
-    context.lineTo(centerX + 13, centerY - 6);
-    context.moveTo(centerX - 10, centerY + 7);
-    context.lineTo(centerX + 8, centerY + 5);
-    context.stroke();
-    context.fillStyle = "#9ca36f";
-    context.beginPath();
-    context.ellipse(centerX + 16, centerY - 17, 4, 2.1, -0.7, 0, Math.PI * 2);
-    context.fill();
-    return;
-  }
-
-  context.strokeStyle = "#74583b";
-  context.lineWidth = 4;
-  context.beginPath();
-  context.moveTo(centerX - 7, centerY - 27);
-  context.lineTo(centerX - 7, centerY + 27);
-  context.moveTo(centerX + 7, centerY - 27);
-  context.lineTo(centerX + 7, centerY + 27);
-  context.moveTo(centerX - 10, centerY - 16);
-  context.lineTo(centerX + 10, centerY - 16);
-  context.moveTo(centerX - 10, centerY + 1);
-  context.lineTo(centerX + 10, centerY + 1);
-  context.moveTo(centerX - 10, centerY + 18);
-  context.lineTo(centerX + 10, centerY + 18);
-  context.stroke();
-  context.strokeStyle = "rgb(201 167 105 / 48%)";
-  context.lineWidth = 1;
-  context.beginPath();
-  context.moveTo(centerX - 5, centerY - 24);
-  context.lineTo(centerX - 5, centerY + 23);
-  context.moveTo(centerX + 9, centerY - 14);
-  context.lineTo(centerX + 9, centerY - 3);
-  context.stroke();
-
-  const sealY = centerY - 7 + Math.sin(time / 700 + boundary) * 1.2;
-  context.fillStyle = "#d3bd83";
-  context.beginPath();
-  context.arc(centerX, sealY, 5, 0, Math.PI * 2);
-  context.fill();
-  context.fillStyle = "#66553d";
-  context.font = "bold 7px Georgia, serif";
-  context.textAlign = "center";
-  context.textBaseline = "middle";
-  context.fillText("?", centerX, sealY + 0.5);
-}
-
 function drawMoth(centerX, centerY, time, scale = 1) {
   const flutter = Math.sin(time / 95) * 0.24;
   context.save();
@@ -922,61 +909,58 @@ function drawMoth(centerX, centerY, time, scale = 1) {
   context.restore();
 }
 
-function drawLandmark(step, index, time, discovered = false) {
+function drawLandmark(step, index, time) {
   const [x, y] = step.position;
   const centerX = (x + 0.5) * TILE_SIZE;
   const centerY = (y + 0.5) * TILE_SIZE;
-  const bob = discovered ? 0 : Math.sin(time / 620 + index) * 2.1;
-  const noteY = centerY - 1 + bob;
-
-  if (!discovered) {
-    const halo = context.createRadialGradient(centerX, noteY, 1, centerX, noteY, 37);
-    halo.addColorStop(0, "rgb(236 214 160 / 30%)");
-    halo.addColorStop(0.48, "rgb(198 202 142 / 14%)");
-    halo.addColorStop(1, "rgb(198 202 142 / 0%)");
-    context.fillStyle = halo;
-    context.beginPath();
-    context.arc(centerX, noteY, 37, 0, Math.PI * 2);
-    context.fill();
-  }
-
-  context.fillStyle = "rgb(51 60 43 / 28%)";
+  const bob = Math.sin(time / 780 + index) * 0.7;
+  const scrollY = centerY - 1 + bob;
+  const glimmer = 0.08 + (Math.sin(time / 390 + index) + 1) * 0.035;
+  const halo = context.createRadialGradient(centerX, scrollY, 1, centerX, scrollY, 16);
+  halo.addColorStop(0, `rgba(237, 220, 174, ${glimmer})`);
+  halo.addColorStop(1, "rgb(237 220 174 / 0%)");
+  context.fillStyle = halo;
   context.beginPath();
-  context.ellipse(centerX, centerY + 12, 15, 5, -0.08, 0, Math.PI * 2);
+  context.arc(centerX, scrollY, 16, 0, Math.PI * 2);
   context.fill();
 
+  context.save();
+  context.translate(centerX, scrollY);
+  context.rotate(Math.sin(index * 2.3) * 0.05);
+  context.fillStyle = "rgb(46 51 39 / 30%)";
   context.beginPath();
-  context.moveTo(centerX - 13, noteY - 9);
-  context.lineTo(centerX - 2, noteY - 12);
-  context.lineTo(centerX + 12, noteY - 8);
-  context.lineTo(centerX + 11, noteY + 8);
-  context.lineTo(centerX + 4, noteY + 10);
-  context.lineTo(centerX - 13, noteY + 7);
-  context.closePath();
-  const paper = context.createLinearGradient(centerX - 10, noteY - 12, centerX + 10, noteY + 9);
-  paper.addColorStop(0, discovered ? "#d4c49c" : "#f1e4c4");
-  paper.addColorStop(1, discovered ? "#bcae85" : "#d9c89d");
+  context.ellipse(0, 9, 14, 4, -0.08, 0, Math.PI * 2);
+  context.fill();
+
+  const paper = context.createLinearGradient(-13, -7, 13, 7);
+  paper.addColorStop(0, "#e4d4ad");
+  paper.addColorStop(0.48, "#f1e5c7");
+  paper.addColorStop(1, "#c8b487");
   context.fillStyle = paper;
+  context.beginPath();
+  context.moveTo(-11, -6);
+  context.lineTo(8, -7);
+  context.lineTo(11, -4);
+  context.lineTo(11, 5);
+  context.lineTo(-8, 6);
+  context.lineTo(-11, 3);
+  context.closePath();
   context.fill();
-  context.strokeStyle = "rgb(114 91 56 / 68%)";
-  context.lineWidth = 1.2;
+  context.strokeStyle = "rgb(113 91 57 / 70%)";
+  context.lineWidth = 1;
   context.stroke();
 
-  context.fillStyle = "#6b644b";
-  context.font = "bold 17px Georgia, serif";
+  context.fillStyle = "#9c8057";
+  context.beginPath();
+  context.ellipse(-10, -1.5, 2.2, 6, 0, 0, Math.PI * 2);
+  context.ellipse(10, 0, 2.2, 5.3, 0, 0, Math.PI * 2);
+  context.fill();
+  context.fillStyle = "#5f5b48";
+  context.font = "bold 10px Georgia, serif";
   context.textAlign = "center";
   context.textBaseline = "middle";
-  context.fillText(step.symbol || "✧", centerX, noteY - 1);
-
-  if (!discovered) {
-    context.strokeStyle = "rgb(246 235 203 / 82%)";
-    context.lineWidth = 1.4;
-    context.beginPath();
-    context.moveTo(centerX - 7, noteY + 3);
-    context.lineTo(centerX + 7, noteY + 3);
-    context.stroke();
-    drawMoth(centerX + 17, noteY - 15, time, 0.55);
-  }
+  context.fillText(step.symbol || "✧", 0, -0.5);
+  context.restore();
 }
 
 function drawGuide(time) {
@@ -1251,9 +1235,7 @@ function drawMap(time) {
     }
   }
 
-  for (let zone = 0; zone <= Math.min(questIndex, QUEST_STEPS.length - 1); zone += 1) {
-    drawTrail(zone);
-  }
+  drawVolcano(time);
   for (const [x, y] of TREE_POSITIONS) {
     if (x >= leftTile - 1 && x <= rightTile + 1 && y >= topTile - 1 && y <= bottomTile + 1) {
       drawTree(x, y, time);
@@ -1276,20 +1258,18 @@ function drawMap(time) {
     }
   }
 
-  const firstVisibleGate = Math.max(1, Math.floor(leftTile / ZONE_WIDTH));
-  const lastVisibleGate = Math.min(
-    QUEST_STEPS.length - 1,
-    Math.ceil(rightTile / ZONE_WIDTH),
-  );
-  for (let boundary = firstVisibleGate; boundary <= lastVisibleGate; boundary += 1) {
-    drawGate(boundary, time);
-  }
-
-  for (let index = 0; index <= questIndex && index < QUEST_STEPS.length; index += 1) {
-    const step = QUEST_STEPS[index];
-    const [x, y] = step.position;
-    if (x >= leftTile - 2 && x <= rightTile + 2 && y >= topTile - 2 && y <= bottomTile + 2) {
-      drawLandmark(step, index, time, index < questIndex);
+  const activeStep = QUEST_STEPS[questIndex];
+  if (activeStep) {
+    const [x, y] = activeStep.position;
+    const distance = Math.hypot(player.pixelX - x, player.pixelY - y);
+    if (
+      distance <= SCROLL_VISIBILITY_RADIUS
+      && x >= leftTile - 2
+      && x <= rightTile + 2
+      && y >= topTile - 2
+      && y <= bottomTile + 2
+    ) {
+      drawLandmark(activeStep, questIndex, time);
     }
   }
   if (
@@ -1329,6 +1309,32 @@ function renderJournalArchive() {
   }
 }
 
+function compassBearing(from, to) {
+  const deltaX = to[0] - from[0];
+  const deltaY = to[1] - from[1];
+  const angle = (Math.atan2(deltaY, deltaX) + Math.PI * 2) % (Math.PI * 2);
+  const directions = [
+    "EAST",
+    "SOUTH-EAST",
+    "SOUTH",
+    "SOUTH-WEST",
+    "WEST",
+    "NORTH-WEST",
+    "NORTH",
+    "NORTH-EAST",
+  ];
+  return directions[Math.round(angle / (Math.PI / 4)) % directions.length];
+}
+
+function islandRegion(position) {
+  const distanceFromVolcano = Math.hypot(
+    position[0] - VOLCANO_CENTER[0],
+    position[1] - VOLCANO_CENTER[1],
+  );
+  if (distanceFromVolcano <= VOLCANO_RADIUS + 1) return "The volcano rim";
+  return `${compassBearing(VOLCANO_CENTER, position).toLowerCase()} slope`;
+}
+
 function updateJournal() {
   const historyFound = QUEST_STEPS.slice(0, questIndex).filter((step) => step.type === "history").length;
   const perksFound = QUEST_STEPS.slice(0, questIndex).filter((step) => step.type === "perk").length;
@@ -1341,24 +1347,27 @@ function updateJournal() {
   const nextStep = QUEST_STEPS[questIndex];
   const chapterTag = document.querySelector("#chapter-tag");
   const currentClue = document.querySelector("#current-clue");
+  const direction = document.querySelector("#clue-direction");
   if (nextStep) {
     chapterTag.textContent = nextStep.type === "history"
       ? `ORIGINS · ${historyFound + 1} OF ${HISTORY_STEPS.length}`
       : `WINDOWS 11 · ${perksFound + 1} OF ${FEATURES.length}`;
     currentClue.textContent = nextStep.clue;
+    const distance = Math.hypot(nextStep.position[0] - player.x, nextStep.position[1] - player.y);
+    direction.textContent = distance <= SCROLL_INTERACTION_RADIUS
+      ? "WITHIN REACH"
+      : compassBearing([player.x, player.y], nextStep.position);
+    document.querySelector("#location-label").textContent = distance <= SCROLL_INTERACTION_RADIUS
+      ? "A scroll is within reach"
+      : islandRegion([player.x, player.y]);
   } else {
     chapterTag.textContent = "JOURNEY COMPLETE";
     currentClue.textContent = "All five history notes and all nine Windows 11 discoveries are safely in your journal.";
+    direction.textContent = "SUMMIT REACHED";
+    document.querySelector("#location-label").textContent = "Volcano summit";
   }
 
   renderJournalArchive();
-  const activePosition = nextStep ? nextStep.position : null;
-  if (activePosition && positionIs([player.x, player.y], activePosition)) {
-    document.querySelector("#location-label").textContent = "A field note is waiting";
-  } else {
-    const zone = Math.max(0, Math.min(GLADE_NAMES.length - 1, Math.floor(player.x / ZONE_WIDTH)));
-    document.querySelector("#location-label").textContent = GLADE_NAMES[zone];
-  }
 }
 
 function showToast(message) {
@@ -1368,7 +1377,7 @@ function showToast(message) {
   toastTimeout = window.setTimeout(() => toast.classList.remove("visible"), 2500);
 }
 
-function openModal({ title, description, art = "✧", eyebrow = "FIELD NOTE", locked = false }) {
+function openModal({ title, description, art = "✧", eyebrow = "SCROLL FOUND", locked = false }) {
   modalTitle.textContent = title;
   modalDescription.textContent = description;
   modalArt.textContent = art;
@@ -1415,7 +1424,7 @@ function showQuestion(question, choices, answer, onCorrect) {
       }
       if (choiceIndex !== answer) {
         button.classList.add("incorrect");
-        answerFeedback.textContent = "Not quite. Read the field note above once more, then give it another try.";
+        answerFeedback.textContent = "Not quite. Read the scroll above once more, then give it another try.";
         return;
       }
 
@@ -1432,26 +1441,26 @@ function showQuestion(question, choices, answer, onCorrect) {
 function showIntro() {
   modalStage = "intro";
   openModal({
-    title: "Welcome to Whisperwood",
-    description: "A trail of field notes winds through these woods. Each one tells a piece of Windows history or reveals a Windows 11 feature. Read each note and answer its check-in to open the next gate; future clues stay hidden until then. Move with WASD or the arrows, and press E to examine.",
+    title: "Welcome to Embercrown Isle",
+    description: "Fourteen scrolls circle a great volcano. The compass gives only a broad bearing, so search the island for the one active scroll. Read it and answer its check-in before the next scroll appears. After the first thirteen, climb the volcano for the final scroll. Use WASD or the arrows to explore, and press E when a scroll is nearby.",
     art: "✧",
     eyebrow: "BEFORE YOU SET OUT",
     locked: true,
   });
   showQuestion(
-    "What opens the next gate?",
+    "When does the next scroll appear?",
     [
-      "Find a note, read it, and answer its check-in",
-      "Walk through the brambles",
-      "Guess where the last clue is",
-      "Press Escape to skip ahead",
+      "After I find and learn the current scroll",
+      "As soon as I start moving",
+      "All scrolls appear at once",
+      "When I press Escape",
     ],
     0,
     () => {
       modalStage = "intro-complete";
-      answerFeedback.textContent = "That's it. One note at a time, and the trail will open.";
+      answerFeedback.textContent = "That's it. One scroll at a time; use the compass to search.";
       answerFeedback.classList.add("success");
-      modalAction.textContent = "Begin the hunt";
+      modalAction.textContent = "Start the hunt";
       modalAction.hidden = false;
     },
   );
@@ -1465,13 +1474,13 @@ function showQuestStep(step, index) {
     description: step.description,
     art: step.symbol,
     eyebrow: step.type === "history"
-      ? `WINDOWS HISTORY · NOTE ${index + 1} OF ${QUEST_STEPS.length}`
-      : `WINDOWS 11 FIELD GUIDE · NOTE ${index + 1} OF ${QUEST_STEPS.length}`,
+      ? `WINDOWS HISTORY · SCROLL ${index + 1} OF ${QUEST_STEPS.length}`
+      : `WINDOWS 11 FIELD GUIDE · SCROLL ${index + 1} OF ${QUEST_STEPS.length}`,
     locked: true,
   });
   tryText.textContent = step.takeaway;
   tryCard.hidden = false;
-  modalAction.textContent = "I've read the note";
+  modalAction.textContent = "I've read the scroll";
   modalAction.hidden = false;
 }
 
@@ -1481,26 +1490,29 @@ function showReview(step, index) {
     title: step.name,
     description: step.description,
     art: step.symbol,
-    eyebrow: step.type === "history" ? "JOURNAL · WINDOWS HISTORY" : "JOURNAL · WINDOWS 11 PERK",
+    eyebrow: step.type === "history" ? "SCROLL JOURNAL · WINDOWS HISTORY" : "SCROLL JOURNAL · WINDOWS 11 PERK",
   });
   tryText.textContent = step.takeaway;
   tryCard.hidden = false;
-  modalAction.textContent = "Close field note";
+  modalAction.textContent = "Close scroll";
   modalAction.hidden = false;
   modalStepIndex = index;
 }
 
 function showGuide() {
-  const line = MORI_DIALOGUE[guideChats % MORI_DIALOGUE.length];
+  const activeStep = QUEST_STEPS[questIndex];
+  const line = activeStep
+    ? `${MORI_DIALOGUE[guideChats % MORI_DIALOGUE.length]} The compass points ${compassBearing([player.x, player.y], activeStep.position).toLowerCase()} for the next scroll.`
+    : "Every scroll has a home in the journal. You made it to the summit!";
   guideChats += 1;
   modalStage = "guide";
   openModal({
     title: "Mori the moth",
     description: line,
     art: "✧",
-    eyebrow: "A FRIENDLY REMINDER",
+    eyebrow: "A FRIENDLY COMPASS CHECK",
   });
-  modalAction.textContent = "Back to the trail";
+  modalAction.textContent = "Back to the hunt";
   modalAction.hidden = false;
 }
 
@@ -1512,13 +1524,13 @@ function completeStep(step, index) {
   modalStage = "step-complete";
   answerFeedback.textContent = step.type === "history"
     ? "Added to your Windows history timeline."
-    : `${step.name} added to your Windows 11 field guide.`;
+    : `${step.name} added to your Windows 11 scroll journal.`;
   answerFeedback.classList.add("success");
-  modalAction.textContent = questIndex === QUEST_STEPS.length ? "Finish the story trail" : "Open the next trail";
+  modalAction.textContent = questIndex === QUEST_STEPS.length ? "Finish at the summit" : "Reveal the next scroll";
   modalAction.hidden = false;
 
   if (questIndex === QUEST_STEPS.length) {
-    showToast("Every field note recovered. Whisperwood is yours to explore!");
+    showToast("All fourteen scrolls read. You made it to the volcano's summit!");
   }
 }
 
@@ -1551,41 +1563,39 @@ function interact() {
   if (!modalBackdrop.hidden) return;
 
   const position = [player.x, player.y];
-  const stepIndex = QUEST_STEPS.findIndex((step) => positionIs(position, step.position));
-  if (stepIndex === questIndex) {
-    showQuestStep(QUEST_STEPS[stepIndex], stepIndex);
+  const activeStep = QUEST_STEPS[questIndex];
+  if (activeStep && distanceBetween(position, activeStep.position) <= SCROLL_INTERACTION_RADIUS) {
+    showQuestStep(activeStep, questIndex);
     return;
   }
-  if (stepIndex !== -1 && stepIndex < questIndex) {
-    showReview(QUEST_STEPS[stepIndex], stepIndex);
+
+  const previousStepIndex = QUEST_STEPS.slice(0, questIndex)
+    .findIndex((step) => distanceBetween(position, step.position) <= SCROLL_INTERACTION_RADIUS);
+  if (previousStepIndex !== -1) {
+    showReview(QUEST_STEPS[previousStepIndex], previousStepIndex);
     return;
   }
-  if (positionIs(position, MORI_POSITION)) {
+  if (distanceBetween(position, MORI_POSITION) <= 1.8) {
     showGuide();
     return;
   }
-  showToast("Follow the current journal clue. The next note won't appear until this one is learned.");
+
+  const direction = activeStep
+    ? compassBearing(position, activeStep.position).toLowerCase()
+    : "the summit";
+  showToast(`No scroll close by. The compass points ${direction}.`);
 }
 
 function movePlayer(dx, dy) {
   const nextX = player.x + dx;
   const nextY = player.y + dy;
   if (nextX < 0 || nextY < 0 || nextX >= MAP_WIDTH || nextY >= MAP_HEIGHT) return;
-  if (["water", "tree", "rock"].includes(mapContent.tiles[nextY][nextX])) return;
-
-  const currentZone = Math.floor(player.x / ZONE_WIDTH);
-  const nextZone = Math.floor(nextX / ZONE_WIDTH);
-  if (nextZone > questIndex) {
-    if (performance.now() - lastGateToastAt > 900) {
-      showToast("The gate is sealed. Recover and learn the current field note first.");
-      lastGateToastAt = performance.now();
-    }
-    return;
-  }
-  if (nextZone !== currentZone && Math.abs(nextY - GATE_Y) > 2) {
-    if (performance.now() - lastGateToastAt > 900) {
-      showToast("The old gate opens at the mossy trail crossing.");
-      lastGateToastAt = performance.now();
+  const tile = mapContent.tiles[nextY][nextX];
+  if (["water", "tree", "rock"].includes(tile)) return;
+  if (tile === "volcano" && questIndex < QUEST_STEPS.length - 1) {
+    if (performance.now() - lastVolcanoToastAt > 900) {
+      showToast("The upper slope is too steep. Find every scroll around the volcano before climbing.");
+      lastVolcanoToastAt = performance.now();
     }
     return;
   }
@@ -1728,12 +1738,12 @@ zoomInButton.addEventListener("click", () => setZoom(zoomLevel + ZOOM_STEP));
 document.querySelector("#help-button").addEventListener("click", () => {
   modalStage = "help";
   openModal({
-    title: "How to follow the trail",
-    description: "Use WASD or the arrow keys to explore and press E when you reach the current field note. Read the note, then answer its question to unlock the next gate. Future clues stay hidden until you learn the one you're on. Use + and - to zoom, or F to maximize the game.",
+    title: "How to hunt the scrolls",
+    description: "Use WASD or the arrow keys to circle the volcano. The journal compass gives a broad direction to the one active scroll; it only becomes visible nearby, and E can read it from a few steps away. Read the scroll and answer its check-in before the next appears. The final scroll waits on the summit. Use + and - to zoom, or F to maximize the game.",
     art: "⌖",
     eyebrow: "FIELD GUIDE",
   });
-  modalAction.textContent = "Back to the trail";
+  modalAction.textContent = "Back to the hunt";
   modalAction.hidden = false;
 });
 
