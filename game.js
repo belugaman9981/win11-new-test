@@ -1,8 +1,73 @@
+const HISTORY_STEPS = [
+  {
+    type: "history",
+    name: "The very first window",
+    position: [4, 17],
+    clue: "Look for an old glass screen where the shore path meets a fallen log.",
+    description: "Windows 1.0 launched in November 1985. It gave MS-DOS computers a graphical environment with windows, menus, icons, and mouse support.",
+    takeaway: "The first Windows was a graphical environment that ran on top of MS-DOS.",
+    question: "What did Windows 1.0 run on top of?",
+    choices: ["MS-DOS", "Windows 10", "Linux", "The Windows Store"],
+    answer: 0,
+    symbol: "▣",
+  },
+  {
+    type: "history",
+    name: "A button to begin",
+    position: [12, 10],
+    clue: "A little square keepsake is hidden beside the old stump below the path.",
+    description: "Windows 95 arrived in August 1995. Its Start menu and taskbar gave people a new, familiar way to open programs and switch between them.",
+    takeaway: "Windows 95 introduced the Start menu and taskbar.",
+    question: "Which familiar tools arrived with Windows 95?",
+    choices: ["Start menu and taskbar", "Widgets and Snap Layouts", "The Microsoft Store and Xbox", "Voice Access and Copilot"],
+    answer: 0,
+    symbol: "◩",
+  },
+  {
+    type: "history",
+    name: "The blue-sky years",
+    position: [20, 22],
+    clue: "Look near the three pale mushrooms just above the path.",
+    description: "Windows XP launched in 2001. It brought the Windows NT foundation to home PCs as well as work PCs, with a bright new look and a more stable base.",
+    takeaway: "Windows XP brought home and work editions together on the Windows NT foundation.",
+    question: "What important foundation did Windows XP use?",
+    choices: ["Windows NT", "MS-DOS only", "Windows 3.1", "A web browser"],
+    answer: 0,
+    symbol: "✿",
+  },
+  {
+    type: "history",
+    name: "A new start, again",
+    position: [28, 10],
+    clue: "A new-start note is tucked beside a broken stone arch above the trail.",
+    description: "Windows 10 launched in July 2015. It brought back the Start menu after Windows 8 and continued Microsoft's move toward regular feature updates.",
+    takeaway: "Windows 10 launched in 2015 and brought back the Start menu.",
+    question: "When did Windows 10 launch?",
+    choices: ["2015", "1995", "2001", "2021"],
+    answer: 0,
+    symbol: "⌂",
+  },
+  {
+    type: "history",
+    name: "A window onto today",
+    position: [36, 22],
+    clue: "A pale-blue glint is waiting beside the weathered standing stone.",
+    description: "Windows 11 first became available on October 5, 2021. Its refreshed design brought a centered Start menu, new window layouts, and more ways to personalize a PC.",
+    takeaway: "Windows 11's first release was October 5, 2021.",
+    question: "When did Windows 11 first become available?",
+    choices: ["October 5, 2021", "August 24, 1995", "July 29, 2015", "November 20, 1985"],
+    answer: 0,
+    symbol: "⊞",
+  },
+];
+
 const FEATURES = [
   {
     name: "A fresh Start",
-    position: [21, 13],
-    description: "Windows 11 gives Start and the taskbar a redesigned, centered look, with a simpler pinned-apps and recommendations layout.",
+    position: [44, 10],
+    clue: "Look for a tiny four-pane window beside the old log above the path.",
+    description: "Windows 11 redesigned Start and the taskbar, centering the app icons and giving Start a simpler pinned-apps and recommendations layout.",
+    takeaway: "Start and the taskbar have a refreshed, centered design.",
     tryIt: "Open Start or visit Settings > Personalization > Taskbar.",
     question: "Which change is part of the Windows 11 redesign?",
     choices: [
@@ -12,11 +77,14 @@ const FEATURES = [
       "Removing the desktop",
     ],
     answer: 0,
+    symbol: "⊞",
   },
   {
     name: "Snap Layouts",
-    position: [11, 10],
+    position: [52, 22],
+    clue: "A little window-shaped note is tucked beside the old stump below the path.",
     description: "Snap Layouts make it easier to arrange several apps side by side using ready-made window arrangements.",
+    takeaway: "Snap Layouts arrange open apps into ready-made layouts.",
     tryIt: "Hover over a window's maximize button, or press Windows+Z.",
     question: "What does Snap Layouts help you do?",
     choices: [
@@ -26,11 +94,14 @@ const FEATURES = [
       "Record your screen",
     ],
     answer: 1,
+    symbol: "▦",
   },
   {
     name: "Widgets",
-    position: [6, 6],
-    description: "The Widgets board brings glanceable information, such as weather and news, together in one personalized panel.",
+    position: [60, 10],
+    clue: "Search near the three pale mushrooms above the path for a weather mark.",
+    description: "The Windows 11 Widgets board gathers glanceable information, such as weather and news, in a personalized panel. Windows 10 had a different News and interests experience.",
+    takeaway: "Widgets bring glanceable, personalized information together in one board.",
     tryIt: "Open Widgets from the taskbar or press Windows+W.",
     question: "Where can you find the Windows 11 Widgets board?",
     choices: [
@@ -40,11 +111,14 @@ const FEATURES = [
       "Only in File Explorer",
     ],
     answer: 2,
+    symbol: "☼",
   },
   {
     name: "File Explorer tabs",
-    position: [15, 4],
+    position: [68, 22],
+    clue: "A folded page is waiting beside the broken stone wall below the path.",
     description: "File Explorer tabs let you keep multiple folders in one window instead of opening a separate window for every folder.",
+    takeaway: "Tabs let you browse several folders in one File Explorer window.",
     tryIt: "Open File Explorer and select the + button to add a tab.",
     question: "What do File Explorer tabs let you do?",
     choices: [
@@ -54,20 +128,26 @@ const FEATURES = [
       "Run Android apps",
     ],
     answer: 0,
+    symbol: "◫",
   },
   {
     name: "Focus sessions",
-    position: [23, 4],
+    position: [76, 10],
+    clue: "A small clock face is hidden beside the standing stone above the path.",
     description: "Focus sessions in the Clock app give you a timed work session and can help reduce distractions.",
+    takeaway: "The Clock app includes timed Focus sessions.",
     tryIt: "Search for Clock, then open Focus sessions.",
     question: "Which Windows 11 app includes Focus sessions?",
     choices: ["Paint", "Clock", "Camera", "Calculator"],
     answer: 1,
+    symbol: "◷",
   },
   {
     name: "Voice Access",
-    position: [32, 6],
+    position: [84, 22],
+    clue: "A quiet voice-shaped note rests beside the fallen log below the path.",
     description: "Voice Access lets you control your PC and dictate text with spoken commands. Language availability varies.",
+    takeaway: "Voice Access can control a PC and dictate text with spoken commands.",
     tryIt: "Look under Settings > Accessibility > Speech.",
     question: "What is Voice Access designed to do?",
     choices: [
@@ -77,11 +157,14 @@ const FEATURES = [
       "Make your PC louder",
     ],
     answer: 0,
+    symbol: "♫",
   },
   {
     name: "Dynamic Lighting",
-    position: [36, 10],
-    description: "For compatible accessories, Dynamic Lighting lets you manage RGB lighting from Windows settings.",
+    position: [92, 10],
+    clue: "A soft-colored spark waits beside the old stump above the path.",
+    description: "For compatible accessories, Dynamic Lighting lets you manage supported RGB lighting from Windows settings.",
+    takeaway: "Dynamic Lighting manages RGB lighting on compatible accessories.",
     tryIt: "Check Settings > Personalization > Dynamic Lighting.",
     question: "What can Dynamic Lighting manage on compatible devices?",
     choices: [
@@ -91,11 +174,14 @@ const FEATURES = [
       "The color of printed documents",
     ],
     answer: 1,
+    symbol: "✧",
   },
   {
     name: "Windows Studio Effects",
-    position: [29, 12],
+    position: [100, 22],
+    clue: "A little camera note waits beside the three pale mushrooms below the trail.",
     description: "On supported hardware, Studio Effects can enhance video calls with effects such as background blur or automatic framing.",
+    takeaway: "Studio Effects can improve video calls on supported PCs.",
     tryIt: "On supported PCs, look in Settings > Bluetooth & devices > Cameras.",
     question: "What might Studio Effects improve on supported PCs?",
     choices: [
@@ -105,11 +191,14 @@ const FEATURES = [
       "The number of USB ports",
     ],
     answer: 0,
+    symbol: "◉",
   },
   {
     name: "Auto HDR",
-    position: [18, 8],
-    description: "On a supported HDR display, Auto HDR can add HDR color and brightness to some older games that were made for SDR.",
+    position: [108, 10],
+    clue: "The final note glimmers beside a weathered stone arch near the far shore.",
+    description: "On a supported HDR display, Auto HDR can add richer color and brightness to some older games made for SDR.",
+    takeaway: "Auto HDR enhances some older games on supported HDR displays.",
     tryIt: "Check Settings > System > Display > HDR.",
     question: "What does Auto HDR do for some supported games?",
     choices: [
@@ -119,31 +208,36 @@ const FEATURES = [
       "Automatically installs paid games",
     ],
     answer: 0,
+    symbol: "◈",
   },
-];
+].map((feature) => ({ ...feature, type: "perk" }));
 
-const MAP_WIDTH = 43;
-const MAP_HEIGHT = 17;
-const TILE_SIZE = 32;
+const QUEST_STEPS = [...HISTORY_STEPS, ...FEATURES];
+const MAP_WIDTH = 112;
+const MAP_HEIGHT = 32;
+const TILE_SIZE = 48;
+const ZONE_WIDTH = 8;
+const GATE_Y = 16;
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 1.75;
-const ZOOM_STEP = 0.15;
-const START = [20, 13];
-const SHELL_POSITIONS = [[3, 6], [8, 14], [16, 6], [26, 3], [38, 10]];
-const TREE_POSITIONS = [
-  [4, 4], [8, 3], [10, 5], [12, 7], [4, 9], [7, 11],
-  [15, 12], [17, 3], [19, 5], [25, 6], [27, 8], [31, 4],
-  [35, 7], [39, 8], [33, 13], [25, 14], [12, 14], [5, 13],
+const ZOOM_STEP = 0.1;
+const START = [3, 16];
+const MORI_POSITION = [2, 15];
+const GLADE_NAMES = [
+  "The fern shore", "The old stump", "Bluebell hollow", "The green rise",
+  "The stone arch", "Birchlight glade", "The fern bend", "The weathered wall",
+  "Mushroom meadow", "The old footbridge", "The fallen log", "Mosslight rise",
+  "The stone steps", "The far lookout",
 ];
-const ROCK_POSITIONS = [[9, 8], [13, 5], [26, 10], [34, 12], [30, 3]];
-const CRAB_POSITION = [22, 8];
-const CHEST_POSITION = [21, 8];
-const CRAB_DIALOGUE = [
-  "Welcome to the island! I accept shells and compliments.",
-  "I tried Snap Layouts. Now my sandcastles have nine windows.",
-  "A shell a day keeps the seagulls... actually, no it doesn't.",
-  "You look very shell-f confident, explorer!",
-];
+const PROP_TYPES = ["fallen-log", "stump", "mushrooms", "ruin", "standing-stone"];
+const SCENE_PROPS = QUEST_STEPS.map((step, zone) => ({
+  position: [
+    zone * ZONE_WIDTH + (zone % 2 ? 2 : 6),
+    step.position[1] + (zone % 2 ? 2 : -2),
+  ],
+  type: PROP_TYPES[zone % PROP_TYPES.length],
+}));
+const IMPORTANT_POSITIONS = [START, MORI_POSITION, ...QUEST_STEPS.map((step) => step.position)];
 
 const canvas = document.querySelector("#island-map");
 const context = canvas.getContext("2d");
@@ -153,6 +247,7 @@ const zoomOutButton = document.querySelector("#zoom-out");
 const zoomInButton = document.querySelector("#zoom-in");
 const zoomLabel = document.querySelector("#zoom-label");
 const modalBackdrop = document.querySelector("#modal-backdrop");
+const modalClose = document.querySelector("#modal-close");
 const modalTitle = document.querySelector("#modal-title");
 const modalDescription = document.querySelector("#modal-description");
 const modalEyebrow = document.querySelector("#modal-eyebrow");
@@ -165,22 +260,32 @@ const answerList = document.querySelector("#answer-list");
 const answerFeedback = document.querySelector("#answer-feedback");
 const modalAction = document.querySelector("#modal-action");
 const toast = document.querySelector("#toast");
-const map = buildMap();
-const player = { x: START[0], y: START[1], pixelX: START[0], pixelY: START[1] };
-const unlocked = new Set();
-const collectedShells = new Set();
-const heldKeys = new Set();
 const landmarks = document.querySelector("#landmark-list");
-let openedFeature = null;
-let crabChats = 0;
-let chestOpened = false;
+const mapContent = buildMap();
+const player = {
+  x: START[0],
+  y: START[1],
+  pixelX: START[0],
+  pixelY: START[1],
+  facing: "down",
+};
+const completedSteps = new Set();
+const heldKeys = new Set();
+let questIndex = 0;
+let modalLocked = false;
+let modalStage = "";
+let modalStepIndex = -1;
+let guideChats = 0;
 let zoomLevel = 1.3;
 let lastMoveAt = 0;
 let lastFrameAt = 0;
+let lastGateToastAt = -Infinity;
 let toastTimeout = 0;
 let canvasWidth = 0;
 let canvasHeight = 0;
 let canvasPixelRatio = 1;
+let groundPattern = null;
+const groundTexture = new Image();
 
 function keyFor([x, y]) {
   return `${x},${y}`;
@@ -190,476 +295,890 @@ function positionIs(left, right) {
   return left[0] === right[0] && left[1] === right[1];
 }
 
-function buildMap() {
-  const tiles = Array.from({ length: MAP_HEIGHT }, (_, y) =>
-    Array.from({ length: MAP_WIDTH }, (_, x) => {
-      const islandDistance = ((x - 21) / 20) ** 2 + ((y - 8) / 8) ** 2;
-      if (islandDistance > 1) return "water";
-      return islandDistance > 0.83 ? "sand" : "grass";
-    }),
-  );
-  const hub = [21, 8];
-  const routes = [[START, hub], ...FEATURES.map((feature) => [hub, feature.position])];
-
-  for (const [start, end] of routes) {
-    let [x, y] = start;
-    while (x !== end[0]) {
-      tiles[y][x] = "path";
-      x += x < end[0] ? 1 : -1;
-    }
-    while (y !== end[1]) {
-      tiles[y][x] = "path";
-      y += y < end[1] ? 1 : -1;
-    }
-    tiles[y][x] = "path";
-  }
-
-  for (const [x, y] of TREE_POSITIONS) tiles[y][x] = "tree";
-  for (const [x, y] of ROCK_POSITIONS) tiles[y][x] = "rock";
-  for (const feature of FEATURES) {
-    const [x, y] = feature.position;
-    tiles[y][x] = "path";
-  }
-  for (const [x, y] of SHELL_POSITIONS) tiles[y][x] = "path";
-  tiles[CRAB_POSITION[1]][CRAB_POSITION[0]] = "path";
-  tiles[CHEST_POSITION[1]][CHEST_POSITION[0]] = "path";
-  return tiles;
-}
-
 function terrainNoise(x, y, salt = 0) {
   const sample = Math.sin(x * 127.1 + y * 311.7 + salt * 74.7) * 43758.5453;
   return sample - Math.floor(sample);
 }
 
-function drawTile(x, y, tile, time) {
+function isNearImportantPosition(x, y, radius = 2) {
+  return IMPORTANT_POSITIONS.some(([importantX, importantY]) =>
+    Math.abs(x - importantX) <= radius && Math.abs(y - importantY) <= radius,
+  );
+}
+
+function buildMap() {
+  const tiles = Array.from({ length: MAP_HEIGHT }, (_, y) =>
+    Array.from({ length: MAP_WIDTH }, (_, x) => {
+      if (x < 1 || x >= MAP_WIDTH - 1 || y < 1 || y >= MAP_HEIGHT - 1) return "water";
+      if (y <= 2 || y >= MAP_HEIGHT - 3) return "sand";
+      return "grass";
+    }),
+  );
+  const trees = [];
+  const rocks = [];
+
+  for (let y = 4; y < MAP_HEIGHT - 4; y += 1) {
+    for (let x = 2; x < MAP_WIDTH - 2; x += 1) {
+      if (tiles[y][x] !== "grass" || isNearImportantPosition(x, y)) continue;
+      if (x % ZONE_WIDTH === 0) continue;
+
+      const density = terrainNoise(x, y, 4);
+      const forestEdge = y <= 7 || y >= 24;
+      const zoneEdge = x % ZONE_WIDTH <= 1 || x % ZONE_WIDTH >= 7;
+      const forestLane = zoneEdge && ((y >= 9 && y <= 14) || (y >= 18 && y <= 23));
+      if ((forestEdge && density > 0.64) || (forestLane && density > 0.79)) {
+        tiles[y][x] = "tree";
+        trees.push([x, y]);
+      } else if ((y === 8 || y === 23) && density > 0.96) {
+        tiles[y][x] = "rock";
+        rocks.push([x, y]);
+      } else if (!forestEdge && density > 0.992 && Math.abs(y - GATE_Y) > 3) {
+        tiles[y][x] = "rock";
+        rocks.push([x, y]);
+      }
+    }
+  }
+
+  const brush = [];
+  for (let y = 8; y <= 23; y += 1) {
+    for (let x = 2; x < MAP_WIDTH - 2; x += 1) {
+      if (tiles[y][x] !== "grass" || isNearImportantPosition(x, y, 1)) continue;
+      if (terrainNoise(x, y, 19) > 0.81) brush.push([x, y]);
+    }
+  }
+
+  return { tiles, trees, rocks, brush };
+}
+
+const TREE_POSITIONS = mapContent.trees;
+const ROCK_POSITIONS = mapContent.rocks;
+const BRUSH_POSITIONS = mapContent.brush;
+const MORI_DIALOGUE = [
+  "A field note is like a tiny window into the past. I like the ones with pictures.",
+  "The gate only opens after the current note is read and solved. No shortcuts through the brambles!",
+  "I saw a moth carrying a clue, but I think Mori was just showing off.",
+  "Fun fact: the Start menu is older than this very mossy stump.",
+];
+
+function traceIsland(inset = 0) {
+  const left = (0.25 + inset) * TILE_SIZE;
+  const right = (MAP_WIDTH - 0.25 - inset) * TILE_SIZE;
+  const top = (1.15 + inset) * TILE_SIZE;
+  const bottom = (MAP_HEIGHT - 1.15 - inset) * TILE_SIZE;
+  const corner = 4.5 * TILE_SIZE;
+
+  context.beginPath();
+  context.moveTo(left + corner, top);
+  context.bezierCurveTo(left + 15 * TILE_SIZE, top - 0.45 * TILE_SIZE, left + 22 * TILE_SIZE, top + 0.42 * TILE_SIZE, left + 34 * TILE_SIZE, top);
+  context.bezierCurveTo(left + 47 * TILE_SIZE, top + 0.28 * TILE_SIZE, left + 54 * TILE_SIZE, top - 0.3 * TILE_SIZE, left + 67 * TILE_SIZE, top);
+  context.bezierCurveTo(left + 82 * TILE_SIZE, top - 0.25 * TILE_SIZE, right - 16 * TILE_SIZE, top + 0.42 * TILE_SIZE, right - corner, top);
+  context.quadraticCurveTo(right, top, right, top + corner);
+  context.lineTo(right, bottom - corner);
+  context.quadraticCurveTo(right, bottom, right - corner, bottom);
+  context.bezierCurveTo(right - 18 * TILE_SIZE, bottom + 0.38 * TILE_SIZE, left + 79 * TILE_SIZE, bottom - 0.38 * TILE_SIZE, left + 65 * TILE_SIZE, bottom);
+  context.bezierCurveTo(left + 49 * TILE_SIZE, bottom + 0.25 * TILE_SIZE, left + 43 * TILE_SIZE, bottom - 0.3 * TILE_SIZE, left + 29 * TILE_SIZE, bottom);
+  context.bezierCurveTo(left + 17 * TILE_SIZE, bottom + 0.38 * TILE_SIZE, left + 11 * TILE_SIZE, bottom - 0.3 * TILE_SIZE, left + corner, bottom);
+  context.quadraticCurveTo(left, bottom, left, bottom - corner);
+  context.lineTo(left, top + corner);
+  context.quadraticCurveTo(left, top, left + corner, top);
+  context.closePath();
+}
+
+function drawIsland() {
+  context.save();
+  traceIsland(0);
+  context.fillStyle = "#c8b487";
+  context.fill();
+
+  traceIsland(1.05);
+  context.save();
+  context.clip();
+  if (groundPattern) {
+    context.fillStyle = groundPattern;
+    context.fillRect(0, 0, MAP_WIDTH * TILE_SIZE, MAP_HEIGHT * TILE_SIZE);
+    context.fillStyle = "rgb(111 129 88 / 24%)";
+    context.fillRect(0, 0, MAP_WIDTH * TILE_SIZE, MAP_HEIGHT * TILE_SIZE);
+  } else {
+    const meadow = context.createLinearGradient(0, 0, MAP_WIDTH * TILE_SIZE, MAP_HEIGHT * TILE_SIZE);
+    meadow.addColorStop(0, "#7d8966");
+    meadow.addColorStop(0.35, "#81906c");
+    meadow.addColorStop(0.72, "#758866");
+    meadow.addColorStop(1, "#82906c");
+    context.fillStyle = meadow;
+    context.fillRect(0, 0, MAP_WIDTH * TILE_SIZE, MAP_HEIGHT * TILE_SIZE);
+  }
+  context.restore();
+
+  traceIsland(1.05);
+  context.strokeStyle = "rgb(211 201 159 / 27%)";
+  context.lineWidth = 1.4 * TILE_SIZE;
+  context.stroke();
+
+  traceIsland(0.9);
+  context.strokeStyle = "rgb(81 104 70 / 23%)";
+  context.lineWidth = 1.2 * TILE_SIZE;
+  context.stroke();
+  context.restore();
+}
+
+function drawWaterRipple(x, y, time) {
+  const left = x * TILE_SIZE;
+  const top = y * TILE_SIZE;
+  const variation = terrainNoise(x, y, 33);
+  const drift = (time * 0.006 + variation * 36) % TILE_SIZE;
+
+  context.beginPath();
+  context.moveTo(left + drift - 10, top + 14 + variation * 18);
+  context.quadraticCurveTo(left + drift, top + 10 + variation * 18, left + drift + 10, top + 14 + variation * 18);
+  context.strokeStyle = "rgb(224 230 211 / 27%)";
+  context.lineWidth = 1.5;
+  context.stroke();
+
+  if (variation > 0.83) {
+    context.beginPath();
+    context.ellipse(left + 8 + variation * 23, top + 9 + variation * 18, 2.8, 1.2, 0, 0, Math.PI * 2);
+    context.fillStyle = "rgb(235 225 190 / 35%)";
+    context.fill();
+  }
+}
+
+function drawTile(x, y, tile) {
   const left = x * TILE_SIZE;
   const top = y * TILE_SIZE;
   const variation = terrainNoise(x, y);
-  const palettes = {
-    grass: ["#788a60", "#74865c"],
-    sand: ["#d6c38c", "#d1bd85"],
-    path: ["#b8a36f", "#b29c68"],
-    water: ["#4e8084", "#497b7f"],
-    tree: ["#788a60", "#74865c"],
-    rock: ["#788a60", "#74865c"],
-  };
-  const [topColor, bottomColor] = palettes[tile] || palettes.grass;
-  const tileGradient = context.createLinearGradient(left, top, left + TILE_SIZE, top + TILE_SIZE);
-  tileGradient.addColorStop(0, topColor);
-  tileGradient.addColorStop(1, bottomColor);
-  context.fillStyle = tileGradient;
-  context.fillRect(left, top, TILE_SIZE, TILE_SIZE);
 
-  if (tile === "water") {
-    const phase = (time * 0.008 + x * 9 + y * 13) % 38;
-    const waveY = top + 7 + terrainNoise(x, y, 2) * 19;
-    context.beginPath();
-    context.moveTo(left + phase - 8, waveY);
-    context.quadraticCurveTo(left + phase, waveY - 3, left + phase + 8, waveY);
-    context.strokeStyle = "rgb(201 221 195 / 38%)";
-    context.lineWidth = 1.1;
-    context.stroke();
-    if (variation > 0.72) {
+  if (tile === "water") return;
+  if (tile !== "sand") {
+    for (let patch = 0; patch < 2; patch += 1) {
+      const seed = terrainNoise(x, y, patch + 66);
+      const patchX = left + 6 + seed * (TILE_SIZE - 12);
+      const patchY = top + 6 + terrainNoise(x, y, patch + 74) * (TILE_SIZE - 12);
       context.beginPath();
-      context.ellipse(left + 6 + variation * 15, top + 8 + variation * 12, 1.4, 1, 0, 0, Math.PI * 2);
-      context.fillStyle = "rgb(241 226 184 / 50%)";
+      context.ellipse(
+        patchX,
+        patchY,
+        7 + seed * 8,
+        4 + seed * 5,
+        seed * Math.PI,
+        0,
+        Math.PI * 2,
+      );
+      context.fillStyle = patch % 2
+        ? "rgb(60 88 57 / 9%)"
+        : "rgb(210 211 157 / 12%)";
       context.fill();
     }
-    return;
   }
 
-  if (tile === "grass" || tile === "tree" || tile === "rock") {
-    for (let detail = 0; detail < 6; detail += 1) {
-      const seed = terrainNoise(x, y, detail + 4);
-      const fleckX = left + 4 + seed * 23;
-      const fleckY = top + 4 + terrainNoise(x, y, detail + 9) * 22;
-      context.beginPath();
-      context.ellipse(fleckX, fleckY, 1.2 + seed, 0.7, seed, 0, Math.PI * 2);
-      context.fillStyle = detail === 0
-        ? "rgb(43 75 49 / 18%)"
-        : "rgb(201 207 154 / 22%)";
-      context.fill();
-    }
-
-    if (tile === "grass" && variation > 0.44) {
-      const tuftX = left + 5 + terrainNoise(x, y, 14) * 22;
-      const tuftY = top + 8 + terrainNoise(x, y, 15) * 17;
-      context.beginPath();
-      context.moveTo(tuftX - 2, tuftY + 2);
-      context.quadraticCurveTo(tuftX - 1, tuftY - 1, tuftX, tuftY - 3);
-      context.moveTo(tuftX, tuftY + 2);
-      context.quadraticCurveTo(tuftX + 1, tuftY - 2, tuftX + 2, tuftY - 4);
-      context.moveTo(tuftX + 1, tuftY + 2);
-      context.quadraticCurveTo(tuftX + 3, tuftY, tuftX + 4, tuftY - 2);
-      context.strokeStyle = "rgb(57 91 56 / 52%)";
-      context.lineWidth = 0.9;
-      context.stroke();
-    }
-
-    if (tile === "grass" && variation > 0.88) {
-      const flowerX = left + 5 + terrainNoise(x, y, 12) * 22;
-      const flowerY = top + 5 + terrainNoise(x, y, 13) * 21;
-      context.beginPath();
-      context.arc(flowerX, flowerY, 1.4, 0, Math.PI * 2);
-      context.fillStyle = variation > 0.93 ? "#e8d69c" : "#dbc5aa";
-      context.fill();
-    }
-  } else if (tile === "sand") {
-    for (let detail = 0; detail < 4; detail += 1) {
-      const grainX = left + 3 + terrainNoise(x, y, detail + 20) * 26;
-      const grainY = top + 3 + terrainNoise(x, y, detail + 30) * 26;
-      context.fillStyle = detail % 2 ? "rgb(121 99 58 / 20%)" : "rgb(255 241 204 / 43%)";
-      context.fillRect(grainX, grainY, 1.1, 1.1);
-    }
-  } else if (tile === "path") {
-    const pebbleX = left + 5 + terrainNoise(x, y, 40) * 21;
-    const pebbleY = top + 5 + terrainNoise(x, y, 41) * 20;
+  for (let detail = 0; detail < 5; detail += 1) {
+    const seed = terrainNoise(x, y, detail + 12);
+    const detailX = left + 5 + seed * (TILE_SIZE - 10);
+    const detailY = top + 5 + terrainNoise(x, y, detail + 28) * (TILE_SIZE - 10);
     context.beginPath();
-    context.ellipse(pebbleX, pebbleY, 2.2, 1.1, 0.3, 0, Math.PI * 2);
-    context.fillStyle = "rgb(100 80 49 / 21%)";
+    context.ellipse(detailX, detailY, 1.2 + seed * 2.3, 0.8 + seed, seed * 2, 0, Math.PI * 2);
+    context.fillStyle = tile === "sand"
+      ? (detail % 2 ? "rgb(112 95 60 / 19%)" : "rgb(255 246 216 / 31%)")
+      : (detail % 2 ? "rgb(54 77 48 / 12%)" : "rgb(210 213 161 / 20%)");
+    context.fill();
+  }
+
+  if (tile === "sand") return;
+  if (variation > 0.36) {
+    const tuftX = left + 8 + terrainNoise(x, y, 44) * (TILE_SIZE - 16);
+    const tuftY = top + 12 + terrainNoise(x, y, 45) * (TILE_SIZE - 20);
+    context.beginPath();
+    context.moveTo(tuftX - 3, tuftY + 4);
+    context.quadraticCurveTo(tuftX - 1, tuftY - 1, tuftX, tuftY - 4);
+    context.moveTo(tuftX, tuftY + 4);
+    context.quadraticCurveTo(tuftX + 1, tuftY - 2, tuftX + 3, tuftY - 5);
+    context.moveTo(tuftX + 2, tuftY + 4);
+    context.quadraticCurveTo(tuftX + 5, tuftY, tuftX + 6, tuftY - 2);
+    context.strokeStyle = "rgb(49 78 49 / 39%)";
+    context.lineWidth = 1.15;
+    context.stroke();
+  }
+
+  if (variation > 0.87) {
+    const flowerX = left + 8 + terrainNoise(x, y, 51) * (TILE_SIZE - 16);
+    const flowerY = top + 8 + terrainNoise(x, y, 52) * (TILE_SIZE - 16);
+    context.fillStyle = "#e6d9ac";
+    for (let petal = 0; petal < 5; petal += 1) {
+      const angle = petal * (Math.PI * 2 / 5);
+      context.beginPath();
+      context.ellipse(
+        flowerX + Math.cos(angle) * 2.2,
+        flowerY + Math.sin(angle) * 2.2,
+        1.7,
+        1.1,
+        angle,
+        0,
+        Math.PI * 2,
+      );
+      context.fill();
+    }
+    context.fillStyle = "#bb9c5e";
+    context.beginPath();
+    context.arc(flowerX, flowerY, 1.1, 0, Math.PI * 2);
     context.fill();
   }
 }
 
-function drawPalmTree(x, y, time) {
-  const left = x * TILE_SIZE;
-  const top = y * TILE_SIZE;
-  const sway = Math.sin(time / 1700 + x * 0.8) * 1.3;
+function drawTree(x, y, time) {
+  const centerX = (x + 0.5) * TILE_SIZE;
+  const centerY = (y + 0.53) * TILE_SIZE;
+  const sway = Math.sin(time / 1800 + x * 0.7) * 1.4;
+  const variation = terrainNoise(x, y, 61);
 
-  const shadow = context.createRadialGradient(left + 16, top + 25, 2, left + 16, top + 25, 15);
-  shadow.addColorStop(0, "rgb(40 56 39 / 38%)");
-  shadow.addColorStop(1, "rgb(40 56 39 / 0%)");
-  context.fillStyle = shadow;
+  context.fillStyle = "rgb(42 56 39 / 22%)";
   context.beginPath();
-  context.ellipse(left + 16, top + 25, 15, 5, 0, 0, Math.PI * 2);
+  context.ellipse(centerX + 3, centerY + 13, 26, 9, 0.12, 0, Math.PI * 2);
   context.fill();
 
-  const trunk = context.createLinearGradient(left + 12, top + 13, left + 22, top + 29);
-  trunk.addColorStop(0, "#a77a4e");
-  trunk.addColorStop(0.52, "#86613f");
-  trunk.addColorStop(1, "#6f5138");
+  const trunk = context.createLinearGradient(centerX - 5, centerY - 2, centerX + 8, centerY + 25);
+  trunk.addColorStop(0, "#987b53");
+  trunk.addColorStop(0.56, "#765f43");
+  trunk.addColorStop(1, "#5e503c");
   context.beginPath();
-  context.moveTo(left + 12, top + 29);
-  context.bezierCurveTo(left + 17, top + 22, left + 18, top + 16, left + 14 + sway, top + 9);
-  context.lineTo(left + 19 + sway, top + 8);
-  context.bezierCurveTo(left + 24, top + 16, left + 23, top + 24, left + 20, top + 30);
+  context.moveTo(centerX - 4, centerY + 18);
+  context.bezierCurveTo(centerX - 2, centerY + 8, centerX + 3 + sway, centerY + 3, centerX + sway, centerY - 9);
+  context.lineTo(centerX + 8 + sway, centerY - 8);
+  context.bezierCurveTo(centerX + 12, centerY + 4, centerX + 7, centerY + 12, centerX + 9, centerY + 20);
   context.closePath();
   context.fillStyle = trunk;
   context.fill();
-  context.strokeStyle = "rgb(231 187 119 / 37%)";
-  context.lineWidth = 1;
-  for (let ring = 0; ring < 3; ring += 1) {
-    const ringY = top + 17 + ring * 4;
-    context.beginPath();
-    context.moveTo(left + 14, ringY);
-    context.lineTo(left + 21, ringY + 1);
-    context.stroke();
-  }
 
-  const crownX = left + 16 + sway;
-  const crownY = top + 10;
-  const fronds = [
-    [-14, -5, -12, -14, "#446b48"],
-    [-12, 2, -17, -7, "#557b4d"],
-    [-5, -8, -5, -18, "#638854"],
-    [6, -8, 13, -17, "#52784b"],
-    [13, 1, 19, -8, "#456b45"],
-    [11, 6, 18, 3, "#668951"],
+  const leaves = [
+    [-16, -12, 20, 15, "#506e4d"],
+    [2, -17, 22, 16, "#637d56"],
+    [18, -8, 19, 15, "#526f4d"],
+    [-7, 1, 20, 15, "#71865d"],
+    [12, 4, 20, 14, "#5b7851"],
+    [-21, -1, 16, 13, "#617b55"],
   ];
-  for (const [endX, controlY, leafX, leafY, color] of fronds) {
+  for (let index = 0; index < leaves.length; index += 1) {
+    const [offsetX, offsetY, radiusX, radiusY, color] = leaves[index];
+    const leafX = centerX + offsetX + sway * (index < 3 ? 0.6 : 0.25);
+    const leafY = centerY + offsetY;
+    const canopy = context.createRadialGradient(leafX - 5, leafY - 5, 2, leafX, leafY, radiusX);
+    canopy.addColorStop(0, index === 1 ? "#87936b" : color);
+    canopy.addColorStop(1, color);
     context.beginPath();
-    context.moveTo(crownX, crownY);
-    context.quadraticCurveTo(crownX + endX / 2, crownY + controlY, crownX + leafX, crownY + leafY);
-    context.quadraticCurveTo(crownX + endX / 2, crownY + controlY + 4, crownX + 2, crownY + 3);
-    context.closePath();
-    context.fillStyle = color;
+    context.ellipse(leafX, leafY, radiusX, radiusY, variation * 0.25, 0, Math.PI * 2);
+    context.fillStyle = canopy;
     context.fill();
-    context.strokeStyle = "rgb(196 205 135 / 38%)";
-    context.lineWidth = 0.7;
+    context.strokeStyle = "rgb(43 67 46 / 22%)";
+    context.lineWidth = 1;
     context.stroke();
   }
 
-  context.fillStyle = "#9c7445";
+  context.strokeStyle = "rgb(188 192 137 / 40%)";
+  context.lineWidth = 1;
   context.beginPath();
-  context.arc(crownX - 2, crownY + 1, 2, 0, Math.PI * 2);
-  context.arc(crownX + 2, crownY + 2, 1.8, 0, Math.PI * 2);
-  context.fill();
+  context.moveTo(centerX - 9, centerY - 8);
+  context.quadraticCurveTo(centerX - 4, centerY - 14, centerX + 1, centerY - 11);
+  context.moveTo(centerX + 3, centerY - 18);
+  context.quadraticCurveTo(centerX + 8, centerY - 21, centerX + 12, centerY - 15);
+  context.stroke();
 }
 
 function drawBoulder(x, y) {
-  const left = x * TILE_SIZE;
-  const top = y * TILE_SIZE;
-  context.fillStyle = "rgb(47 64 43 / 28%)";
+  const centerX = (x + 0.5) * TILE_SIZE;
+  const centerY = (y + 0.56) * TILE_SIZE;
+  context.fillStyle = "rgb(44 54 42 / 22%)";
   context.beginPath();
-  context.ellipse(left + 17, top + 26, 13, 4, 0, 0, Math.PI * 2);
+  context.ellipse(centerX + 2, centerY + 9, 20, 6, 0.1, 0, Math.PI * 2);
   context.fill();
 
-  const stone = context.createLinearGradient(left + 7, top + 10, left + 25, top + 27);
-  stone.addColorStop(0, "#c2b9a1");
-  stone.addColorStop(0.45, "#9d9a85");
-  stone.addColorStop(1, "#777969");
+  const stone = context.createLinearGradient(centerX - 16, centerY - 15, centerX + 18, centerY + 12);
+  stone.addColorStop(0, "#b7b29c");
+  stone.addColorStop(0.48, "#92927f");
+  stone.addColorStop(1, "#707466");
   context.beginPath();
-  context.moveTo(left + 6, top + 22);
-  context.lineTo(left + 9, top + 14);
-  context.lineTo(left + 16, top + 10);
-  context.lineTo(left + 22, top + 13);
-  context.lineTo(left + 27, top + 21);
-  context.lineTo(left + 23, top + 26);
-  context.lineTo(left + 11, top + 27);
+  context.moveTo(centerX - 18, centerY + 5);
+  context.lineTo(centerX - 14, centerY - 9);
+  context.lineTo(centerX - 4, centerY - 17);
+  context.lineTo(centerX + 8, centerY - 14);
+  context.lineTo(centerX + 17, centerY - 5);
+  context.lineTo(centerX + 18, centerY + 5);
+  context.quadraticCurveTo(centerX + 9, centerY + 13, centerX - 10, centerY + 11);
   context.closePath();
   context.fillStyle = stone;
   context.fill();
-  context.strokeStyle = "rgb(66 72 61 / 46%)";
-  context.lineWidth = 1;
+  context.strokeStyle = "rgb(68 72 61 / 57%)";
+  context.lineWidth = 1.5;
   context.stroke();
 
   context.beginPath();
-  context.moveTo(left + 10, top + 15);
-  context.lineTo(left + 16, top + 11);
-  context.lineTo(left + 18, top + 17);
-  context.lineTo(left + 12, top + 20);
+  context.moveTo(centerX - 13, centerY - 8);
+  context.lineTo(centerX - 4, centerY - 15);
+  context.lineTo(centerX + 1, centerY - 8);
+  context.lineTo(centerX - 8, centerY - 3);
   context.closePath();
-  context.fillStyle = "rgb(231 224 196 / 43%)";
+  context.fillStyle = "rgb(229 224 198 / 40%)";
   context.fill();
+  context.strokeStyle = "rgb(137 146 105 / 54%)";
+  context.lineWidth = 1;
+  context.beginPath();
+  context.moveTo(centerX + 3, centerY - 13);
+  context.quadraticCurveTo(centerX + 8, centerY - 17, centerX + 13, centerY - 11);
+  context.stroke();
 }
 
-function drawShell(x, y, time) {
-  const centerX = x * TILE_SIZE + TILE_SIZE / 2;
-  const centerY = y * TILE_SIZE + TILE_SIZE / 2;
-  const bob = Math.sin(time / 520 + x) * 1.4;
-  context.fillStyle = "rgb(62 68 51 / 25%)";
+function drawFern(x, y, time) {
+  const centerX = (x + 0.5) * TILE_SIZE;
+  const centerY = (y + 0.65) * TILE_SIZE;
+  const sway = Math.sin(time / 900 + x * 2 + y) * 1.6;
+  context.fillStyle = "rgb(48 64 42 / 18%)";
   context.beginPath();
-  context.ellipse(centerX, centerY + 7, 7, 2.5, 0, 0, Math.PI * 2);
+  context.ellipse(centerX, centerY + 3, 16, 5, 0, 0, Math.PI * 2);
   context.fill();
 
-  const shell = context.createLinearGradient(centerX - 6, centerY - 3, centerX + 5, centerY + 5);
-  shell.addColorStop(0, "#fff0c7");
-  shell.addColorStop(0.55, "#e8cd91");
-  shell.addColorStop(1, "#bd9660");
-  context.beginPath();
-  context.moveTo(centerX - 6, centerY + 3 + bob);
-  context.quadraticCurveTo(centerX - 5, centerY - 5 + bob, centerX, centerY - 4 + bob);
-  context.quadraticCurveTo(centerX + 7, centerY - 3 + bob, centerX + 6, centerY + 3 + bob);
-  context.quadraticCurveTo(centerX, centerY + 7 + bob, centerX - 6, centerY + 3 + bob);
-  context.fillStyle = shell;
-  context.fill();
-  context.strokeStyle = "rgb(132 101 61 / 65%)";
-  context.lineWidth = 0.8;
-  context.stroke();
-  for (let groove = -2; groove <= 2; groove += 2) {
+  for (let frond = 0; frond < 5; frond += 1) {
+    const side = frond - 2;
+    const endX = centerX + side * 7 + sway;
+    const endY = centerY - 16 - (2 - Math.abs(side)) * 2;
     context.beginPath();
-    context.moveTo(centerX, centerY - 3 + bob);
-    context.quadraticCurveTo(centerX + groove * 1.6, centerY + 1 + bob, centerX + groove * 2, centerY + 4 + bob);
-    context.strokeStyle = "rgb(255 247 218 / 76%)";
+    context.moveTo(centerX, centerY + 2);
+    context.quadraticCurveTo(centerX + side * 4, centerY - 8, endX, endY);
+    context.strokeStyle = frond % 2 ? "#52784d" : "#6f8b5a";
+    context.lineWidth = 2;
     context.stroke();
+    for (let leaf = 1; leaf <= 3; leaf += 1) {
+      const progress = leaf / 4;
+      const leafX = centerX + (endX - centerX) * progress;
+      const leafY = centerY + 2 + (endY - centerY - 2) * progress;
+      context.beginPath();
+      context.ellipse(leafX - 4, leafY, 5, 2, -0.5, 0, Math.PI * 2);
+      context.ellipse(leafX + 4, leafY - 1, 5, 2, 0.5, 0, Math.PI * 2);
+      context.fillStyle = frond % 2 ? "#587b50" : "#718b5b";
+      context.fill();
+    }
   }
-  if (Math.sin(time / 420 + x * 2) > 0.75) {
-    context.fillStyle = "rgb(255 247 218 / 86%)";
+}
+
+function drawProp(prop) {
+  const [x, y] = prop.position;
+  const left = (x + 0.5) * TILE_SIZE;
+  const top = (y + 0.5) * TILE_SIZE;
+
+  if (prop.type === "stump") {
+    context.fillStyle = "rgb(46 57 42 / 23%)";
     context.beginPath();
-    context.arc(centerX + 9, centerY - 7 + bob, 1.5, 0, Math.PI * 2);
+    context.ellipse(left, top + 13, 18, 6, 0, 0, Math.PI * 2);
+    context.fill();
+    context.fillStyle = "#806647";
+    context.beginPath();
+    context.moveTo(left - 13, top + 10);
+    context.lineTo(left - 10, top - 4);
+    context.quadraticCurveTo(left, top - 10, left + 11, top - 3);
+    context.lineTo(left + 13, top + 10);
+    context.closePath();
+    context.fill();
+    context.fillStyle = "#ba9b69";
+    context.beginPath();
+    context.ellipse(left, top - 4, 12, 5.2, 0.05, 0, Math.PI * 2);
+    context.fill();
+    context.strokeStyle = "#816b47";
+    context.lineWidth = 1;
+    context.beginPath();
+    context.ellipse(left, top - 4, 6.5, 2.8, 0.05, 0, Math.PI * 2);
+    context.stroke();
+  } else if (prop.type === "mushrooms") {
+    for (let mushroom = 0; mushroom < 3; mushroom += 1) {
+      const offsetX = (mushroom - 1) * 11;
+      const height = mushroom === 1 ? 14 : 10;
+      context.fillStyle = "#e2d9bd";
+      context.fillRect(left + offsetX - 2, top - height + 4, 4, height);
+      context.fillStyle = mushroom === 1 ? "#a56856" : "#c38b65";
+      context.beginPath();
+      context.ellipse(left + offsetX, top - height + 4, 7, 4.3, 0, Math.PI, Math.PI * 2);
+      context.lineTo(left + offsetX + 6, top - height + 4);
+      context.quadraticCurveTo(left + offsetX, top - height + 1, left + offsetX - 6, top - height + 4);
+      context.fill();
+      context.fillStyle = "rgb(246 230 194 / 80%)";
+      context.beginPath();
+      context.arc(left + offsetX - 2, top - height + 1, 1.3, 0, Math.PI * 2);
+      context.fill();
+    }
+  } else if (prop.type === "ruin") {
+    context.fillStyle = "rgb(45 57 42 / 19%)";
+    context.beginPath();
+    context.ellipse(left, top + 14, 23, 6, 0, 0, Math.PI * 2);
+    context.fill();
+    const stone = context.createLinearGradient(left - 19, top - 12, left + 20, top + 10);
+    stone.addColorStop(0, "#b7b39d");
+    stone.addColorStop(1, "#858879");
+    context.fillStyle = stone;
+    context.beginPath();
+    context.roundRect(left - 19, top - 8, 8, 23, 2);
+    context.roundRect(left + 11, top - 8, 8, 23, 2);
+    context.roundRect(left - 22, top - 14, 44, 8, 2);
+    context.fill();
+    context.strokeStyle = "rgb(79 85 72 / 65%)";
+    context.lineWidth = 1.1;
+    context.beginPath();
+    context.moveTo(left - 19, top - 7);
+    context.lineTo(left - 11, top - 7);
+    context.moveTo(left + 11, top - 7);
+    context.lineTo(left + 19, top - 7);
+    context.stroke();
+    context.fillStyle = "#617b54";
+    context.beginPath();
+    context.ellipse(left - 17, top - 15, 5, 2, -0.3, 0, Math.PI * 2);
+    context.ellipse(left + 15, top - 14, 6, 2, 0.4, 0, Math.PI * 2);
+    context.fill();
+  } else if (prop.type === "fallen-log") {
+    context.save();
+    context.translate(left, top);
+    context.rotate(-0.15);
+    const log = context.createLinearGradient(0, -8, 0, 9);
+    log.addColorStop(0, "#9a7951");
+    log.addColorStop(0.52, "#795d40");
+    log.addColorStop(1, "#5d4d39");
+    context.fillStyle = log;
+    context.beginPath();
+    context.roundRect(-22, -7, 44, 15, 7);
+    context.fill();
+    context.fillStyle = "#c0a475";
+    context.beginPath();
+    context.ellipse(-20, 0, 5, 7, 0, 0, Math.PI * 2);
+    context.fill();
+    context.strokeStyle = "#705738";
+    context.lineWidth = 1;
+    context.beginPath();
+    context.ellipse(-20, 0, 2.4, 4, 0, 0, Math.PI * 2);
+    context.stroke();
+    context.restore();
+  } else {
+    drawBoulder(x, y);
+  }
+}
+
+function drawTrail(zone) {
+  const step = QUEST_STEPS[zone];
+  if (!step) return;
+  const startX = zone * ZONE_WIDTH;
+  const endX = startX + ZONE_WIDTH;
+  const [noteX, noteY] = step.position;
+
+  context.beginPath();
+  context.moveTo(startX * TILE_SIZE, GATE_Y * TILE_SIZE);
+  context.bezierCurveTo(
+    (startX + 2) * TILE_SIZE,
+    GATE_Y * TILE_SIZE,
+    (noteX - 2) * TILE_SIZE,
+    noteY * TILE_SIZE,
+    noteX * TILE_SIZE,
+    noteY * TILE_SIZE,
+  );
+  context.bezierCurveTo(
+    (noteX + 2) * TILE_SIZE,
+    noteY * TILE_SIZE,
+    (endX - 2) * TILE_SIZE,
+    GATE_Y * TILE_SIZE,
+    endX * TILE_SIZE,
+    GATE_Y * TILE_SIZE,
+  );
+
+  context.lineCap = "round";
+  context.lineJoin = "round";
+  context.strokeStyle = "rgb(64 72 51 / 25%)";
+  context.lineWidth = 0.58 * TILE_SIZE;
+  context.stroke();
+  context.strokeStyle = "#a18e6b";
+  context.lineWidth = 0.4 * TILE_SIZE;
+  context.stroke();
+  context.strokeStyle = "#c6b38a";
+  context.lineWidth = 0.25 * TILE_SIZE;
+  context.stroke();
+  context.strokeStyle = "rgb(246 231 192 / 20%)";
+  context.lineWidth = 1.4;
+  context.stroke();
+}
+
+function drawGateBush(x, y, variation) {
+  const centerX = x * TILE_SIZE;
+  const centerY = y * TILE_SIZE;
+  const shades = ["#4c694a", "#58754d", "#6a8055"];
+  context.fillStyle = "rgb(40 56 39 / 18%)";
+  context.beginPath();
+  context.ellipse(centerX, centerY + 11, 24, 8, 0, 0, Math.PI * 2);
+  context.fill();
+  for (let leaf = 0; leaf < 4; leaf += 1) {
+    const offsetX = (leaf - 1.5) * 11;
+    const offsetY = Math.sin(leaf * 2 + variation) * 5;
+    context.beginPath();
+    context.ellipse(centerX + offsetX, centerY + offsetY, 13, 11, 0.2 * leaf, 0, Math.PI * 2);
+    context.fillStyle = shades[(leaf + Math.floor(variation * 3)) % shades.length];
     context.fill();
   }
 }
 
-function drawLandmark(feature, index, time) {
-  const [x, y] = feature.position;
-  const centerX = x * TILE_SIZE + TILE_SIZE / 2;
-  const centerY = y * TILE_SIZE + TILE_SIZE / 2;
-  const isUnlocked = unlocked.has(index);
-  const bob = Math.sin(time / 650 + index) * 1.2;
-  const halo = context.createRadialGradient(centerX, centerY - 3 + bob, 1, centerX, centerY - 3 + bob, 17);
-  halo.addColorStop(0, isUnlocked ? "rgb(175 203 145 / 34%)" : "rgb(235 203 136 / 31%)");
-  halo.addColorStop(1, "rgb(235 203 136 / 0%)");
-  context.fillStyle = halo;
-  context.beginPath();
-  context.arc(centerX, centerY - 3 + bob, 17, 0, Math.PI * 2);
-  context.fill();
-
-  context.fillStyle = "rgb(57 63 45 / 29%)";
-  context.beginPath();
-  context.ellipse(centerX, centerY + 8, 10, 3.2, 0, 0, Math.PI * 2);
-  context.fill();
-  context.fillStyle = "#80623f";
-  context.fillRect(centerX - 1.3, centerY - 5 + bob, 2.6, 13);
-
-  const sign = context.createLinearGradient(centerX - 7, centerY - 12 + bob, centerX + 7, centerY + bob);
-  if (isUnlocked) {
-    sign.addColorStop(0, "#cad4a0");
-    sign.addColorStop(1, "#94ad79");
-  } else {
-    sign.addColorStop(0, "#f1d89d");
-    sign.addColorStop(1, "#c6a567");
+function drawGate(boundary, time) {
+  const gateX = boundary * ZONE_WIDTH;
+  const isOpen = boundary <= questIndex;
+  for (let y = 3; y <= MAP_HEIGHT - 3; y += 2) {
+    if (Math.abs(y - GATE_Y) <= 2.3) continue;
+    drawGateBush(gateX, y + Math.sin(time / 1500 + y) * 0.04, terrainNoise(boundary, y, 5));
   }
+
+  const centerX = gateX * TILE_SIZE;
+  const centerY = GATE_Y * TILE_SIZE;
+  context.fillStyle = "rgb(42 53 38 / 26%)";
   context.beginPath();
-  context.moveTo(centerX - 7, centerY - 12 + bob);
-  context.lineTo(centerX + 7, centerY - 12 + bob);
-  context.lineTo(centerX + 8, centerY - 1 + bob);
-  context.lineTo(centerX, centerY + 2 + bob);
-  context.lineTo(centerX - 8, centerY - 1 + bob);
-  context.closePath();
-  context.fillStyle = sign;
+  context.ellipse(centerX, centerY + 16, 24, 8, 0, 0, Math.PI * 2);
   context.fill();
-  context.strokeStyle = isUnlocked ? "#627b51" : "#80643c";
+
+  if (isOpen) {
+    context.strokeStyle = "#816c4c";
+    context.lineWidth = 4;
+    context.beginPath();
+    context.moveTo(centerX - 8, centerY + 16);
+    context.lineTo(centerX - 14, centerY - 22);
+    context.moveTo(centerX - 8, centerY - 2);
+    context.lineTo(centerX + 13, centerY - 6);
+    context.moveTo(centerX - 10, centerY + 7);
+    context.lineTo(centerX + 8, centerY + 5);
+    context.stroke();
+    context.fillStyle = "#9ca36f";
+    context.beginPath();
+    context.ellipse(centerX + 16, centerY - 17, 4, 2.1, -0.7, 0, Math.PI * 2);
+    context.fill();
+    return;
+  }
+
+  context.strokeStyle = "#74583b";
+  context.lineWidth = 4;
+  context.beginPath();
+  context.moveTo(centerX - 7, centerY - 27);
+  context.lineTo(centerX - 7, centerY + 27);
+  context.moveTo(centerX + 7, centerY - 27);
+  context.lineTo(centerX + 7, centerY + 27);
+  context.moveTo(centerX - 10, centerY - 16);
+  context.lineTo(centerX + 10, centerY - 16);
+  context.moveTo(centerX - 10, centerY + 1);
+  context.lineTo(centerX + 10, centerY + 1);
+  context.moveTo(centerX - 10, centerY + 18);
+  context.lineTo(centerX + 10, centerY + 18);
+  context.stroke();
+  context.strokeStyle = "rgb(201 167 105 / 48%)";
   context.lineWidth = 1;
+  context.beginPath();
+  context.moveTo(centerX - 5, centerY - 24);
+  context.lineTo(centerX - 5, centerY + 23);
+  context.moveTo(centerX + 9, centerY - 14);
+  context.lineTo(centerX + 9, centerY - 3);
   context.stroke();
 
-  context.fillStyle = isUnlocked ? "#455d3b" : "#55462e";
-  context.font = "bold 9px 'Segoe UI', sans-serif";
+  const sealY = centerY - 7 + Math.sin(time / 700 + boundary) * 1.2;
+  context.fillStyle = "#d3bd83";
+  context.beginPath();
+  context.arc(centerX, sealY, 5, 0, Math.PI * 2);
+  context.fill();
+  context.fillStyle = "#66553d";
+  context.font = "bold 7px Georgia, serif";
   context.textAlign = "center";
   context.textBaseline = "middle";
-  context.fillText(isUnlocked ? "✓" : String(index + 1), centerX, centerY - 6 + bob);
+  context.fillText("?", centerX, sealY + 0.5);
 }
 
-function drawCrab(time) {
-  const [x, y] = CRAB_POSITION;
-  const centerX = x * TILE_SIZE + TILE_SIZE / 2;
-  const centerY = y * TILE_SIZE + TILE_SIZE / 2 + Math.sin(time / 550) * 0.8;
-
-  context.fillStyle = "rgb(67 61 46 / 25%)";
+function drawMoth(centerX, centerY, time, scale = 1) {
+  const flutter = Math.sin(time / 95) * 0.24;
+  context.save();
+  context.translate(centerX, centerY);
+  context.scale(scale, scale);
+  const glow = context.createRadialGradient(0, 0, 1, 0, 0, 19);
+  glow.addColorStop(0, "rgb(240 221 160 / 34%)");
+  glow.addColorStop(1, "rgb(240 221 160 / 0%)");
+  context.fillStyle = glow;
   context.beginPath();
-  context.ellipse(centerX, centerY + 7, 11, 3, 0, 0, Math.PI * 2);
-  context.fill();
-  context.strokeStyle = "#aa573f";
-  context.lineWidth = 2;
-  for (let leg = -1; leg <= 1; leg += 1) {
-    context.beginPath();
-    context.moveTo(centerX - 5, centerY + 3);
-    context.lineTo(centerX - 10, centerY + 4 + leg * 3);
-    context.moveTo(centerX + 5, centerY + 3);
-    context.lineTo(centerX + 10, centerY + 4 + leg * 3);
-    context.stroke();
-  }
-
-  const shell = context.createRadialGradient(centerX - 3, centerY - 5, 1, centerX, centerY, 12);
-  shell.addColorStop(0, "#eea17a");
-  shell.addColorStop(1, "#bd654c");
-  context.fillStyle = shell;
-  context.beginPath();
-  context.ellipse(centerX, centerY + 1, 9, 7, 0, 0, Math.PI * 2);
+  context.arc(0, 0, 19, 0, Math.PI * 2);
   context.fill();
 
-  context.strokeStyle = "#bd654c";
-  context.lineWidth = 2;
+  context.save();
+  context.rotate(flutter);
+  context.fillStyle = "#f3e8c9";
   context.beginPath();
-  context.moveTo(centerX - 6, centerY - 3);
-  context.lineTo(centerX - 9, centerY - 8);
-  context.moveTo(centerX + 6, centerY - 3);
-  context.lineTo(centerX + 9, centerY - 8);
+  context.ellipse(-6, -2, 6, 3.3, -0.4, 0, Math.PI * 2);
+  context.ellipse(6, -2, 6, 3.3, 0.4, 0, Math.PI * 2);
+  context.fill();
+  context.fillStyle = "rgb(194 170 120 / 53%)";
+  context.beginPath();
+  context.ellipse(-5, -2, 3, 1.5, -0.4, 0, Math.PI * 2);
+  context.ellipse(5, -2, 3, 1.5, 0.4, 0, Math.PI * 2);
+  context.fill();
+  context.restore();
+
+  context.strokeStyle = "#846c48";
+  context.lineWidth = 1.6;
+  context.beginPath();
+  context.moveTo(0, -4);
+  context.lineTo(0, 4);
+  context.moveTo(-1, -3);
+  context.quadraticCurveTo(-4, -8, -5, -6);
+  context.moveTo(1, -3);
+  context.quadraticCurveTo(4, -8, 5, -6);
   context.stroke();
-  for (const clawSide of [-1, 1]) {
-    context.fillStyle = "#d77c5c";
+  context.restore();
+}
+
+function drawLandmark(step, index, time, discovered = false) {
+  const [x, y] = step.position;
+  const centerX = (x + 0.5) * TILE_SIZE;
+  const centerY = (y + 0.5) * TILE_SIZE;
+  const bob = discovered ? 0 : Math.sin(time / 620 + index) * 2.1;
+  const noteY = centerY - 1 + bob;
+
+  if (!discovered) {
+    const halo = context.createRadialGradient(centerX, noteY, 1, centerX, noteY, 37);
+    halo.addColorStop(0, "rgb(236 214 160 / 30%)");
+    halo.addColorStop(0.48, "rgb(198 202 142 / 14%)");
+    halo.addColorStop(1, "rgb(198 202 142 / 0%)");
+    context.fillStyle = halo;
     context.beginPath();
-    context.arc(centerX + clawSide * 10, centerY - 9, 3.2, 0, Math.PI * 2);
+    context.arc(centerX, noteY, 37, 0, Math.PI * 2);
     context.fill();
-    context.fillStyle = "#f7e5c4";
+  }
+
+  context.fillStyle = "rgb(51 60 43 / 28%)";
+  context.beginPath();
+  context.ellipse(centerX, centerY + 12, 15, 5, -0.08, 0, Math.PI * 2);
+  context.fill();
+
+  context.beginPath();
+  context.moveTo(centerX - 13, noteY - 9);
+  context.lineTo(centerX - 2, noteY - 12);
+  context.lineTo(centerX + 12, noteY - 8);
+  context.lineTo(centerX + 11, noteY + 8);
+  context.lineTo(centerX + 4, noteY + 10);
+  context.lineTo(centerX - 13, noteY + 7);
+  context.closePath();
+  const paper = context.createLinearGradient(centerX - 10, noteY - 12, centerX + 10, noteY + 9);
+  paper.addColorStop(0, discovered ? "#d4c49c" : "#f1e4c4");
+  paper.addColorStop(1, discovered ? "#bcae85" : "#d9c89d");
+  context.fillStyle = paper;
+  context.fill();
+  context.strokeStyle = "rgb(114 91 56 / 68%)";
+  context.lineWidth = 1.2;
+  context.stroke();
+
+  context.fillStyle = "#6b644b";
+  context.font = "bold 17px Georgia, serif";
+  context.textAlign = "center";
+  context.textBaseline = "middle";
+  context.fillText(step.symbol || "✧", centerX, noteY - 1);
+
+  if (!discovered) {
+    context.strokeStyle = "rgb(246 235 203 / 82%)";
+    context.lineWidth = 1.4;
     context.beginPath();
-    context.arc(centerX + clawSide * 2.2, centerY - 1, 1.5, 0, Math.PI * 2);
-    context.fill();
-    context.fillStyle = "#3e4638";
-    context.beginPath();
-    context.arc(centerX + clawSide * 2.2, centerY - 1, 0.65, 0, Math.PI * 2);
-    context.fill();
+    context.moveTo(centerX - 7, noteY + 3);
+    context.lineTo(centerX + 7, noteY + 3);
+    context.stroke();
+    drawMoth(centerX + 17, noteY - 15, time, 0.55);
   }
 }
 
-function drawChest(time) {
-  const [x, y] = CHEST_POSITION;
-  const left = x * TILE_SIZE + 7;
-  const top = y * TILE_SIZE + 10;
-  const bob = Math.sin(time / 650) * 0.5;
-
-  context.fillStyle = "rgb(61 54 38 / 26%)";
-  context.beginPath();
-  context.ellipse(left + 9, top + 19, 12, 3, 0, 0, Math.PI * 2);
-  context.fill();
-  context.fillStyle = "#735238";
-  context.fillRect(left, top + 6 + bob, 18, 11);
-  context.fillStyle = "#9b7045";
-  context.fillRect(left + 2, top + 8 + bob, 14, 7);
-  context.fillStyle = chestOpened ? "#d4b768" : "#c99b52";
-  context.beginPath();
-  context.moveTo(left - 1, top + 7 + bob);
-  context.lineTo(left + 1, top + 2 + bob);
-  context.lineTo(left + 17, top + 2 + bob);
-  context.lineTo(left + 19, top + 7 + bob);
-  context.closePath();
-  context.fill();
-  context.fillStyle = "#ddc786";
-  context.fillRect(left + 8, top + 7 + bob, 3, 8);
-  context.fillStyle = "#765a39";
-  context.beginPath();
-  context.arc(left + 9.5, top + 10 + bob, 1, 0, Math.PI * 2);
-  context.fill();
-  if (!chestOpened) {
-    context.fillStyle = "rgb(247 223 161 / 48%)";
-    context.fillRect(left + 3, top + 4, 3, 1);
-  }
+function drawGuide(time) {
+  const [x, y] = MORI_POSITION;
+  const flutter = Math.sin(time / 130) * 3;
+  drawMoth((x + 0.5) * TILE_SIZE, (y + 0.3) * TILE_SIZE + flutter, time, 0.95);
 }
 
 function drawPlayer(time) {
   const centerX = (player.pixelX + 0.5) * TILE_SIZE;
   const centerY = (player.pixelY + 0.5) * TILE_SIZE;
-  const bounce = Math.sin(time / 120) * 0.7;
-  const headY = centerY - 4 + bounce;
+  const moving = performance.now() - lastMoveAt < 175;
+  const stride = moving ? Math.sin(time / 42) * 2.1 : 0;
+  const bounce = moving ? Math.abs(Math.sin(time / 42)) * 1.5 : Math.sin(time / 470) * 0.5;
 
-  const shadow = context.createRadialGradient(centerX, centerY + 9, 1, centerX, centerY + 9, 11);
-  shadow.addColorStop(0, "rgb(42 47 35 / 39%)");
-  shadow.addColorStop(1, "rgb(42 47 35 / 0%)");
+  const shadow = context.createRadialGradient(centerX, centerY + 13, 1, centerX, centerY + 13, 18);
+  shadow.addColorStop(0, "rgb(37 45 34 / 43%)");
+  shadow.addColorStop(1, "rgb(37 45 34 / 0%)");
   context.fillStyle = shadow;
   context.beginPath();
-  context.ellipse(centerX, centerY + 9, 11, 4, 0, 0, Math.PI * 2);
+  context.ellipse(centerX, centerY + 13, 17, 6, 0, 0, Math.PI * 2);
   context.fill();
 
-  context.fillStyle = "#67503a";
-  context.fillRect(centerX - 6, centerY + 5 + bounce, 5, 6);
-  context.fillRect(centerX + 1, centerY + 5 + bounce, 5, 6);
-  context.fillStyle = "#493d32";
-  context.fillRect(centerX - 7, centerY + 10 + bounce, 6, 2);
-  context.fillRect(centerX + 1, centerY + 10 + bounce, 6, 2);
-
-  const pack = context.createLinearGradient(centerX - 9, centerY, centerX - 3, centerY + 8);
-  pack.addColorStop(0, "#9a7046");
-  pack.addColorStop(1, "#694f39");
-  context.fillStyle = pack;
+  context.strokeStyle = "#5b4634";
+  context.lineWidth = 4.2;
+  context.lineCap = "round";
   context.beginPath();
-  context.roundRect(centerX - 9, centerY - 1 + bounce, 6, 9, 2);
-  context.fill();
-
-  const coat = context.createLinearGradient(centerX - 6, centerY - 1, centerX + 6, centerY + 8);
-  coat.addColorStop(0, "#78845a");
-  coat.addColorStop(1, "#4e6448");
-  context.fillStyle = coat;
+  context.moveTo(centerX - 4, centerY + 7 + bounce);
+  context.lineTo(centerX - 5 + stride, centerY + 16);
+  context.moveTo(centerX + 4, centerY + 7 + bounce);
+  context.lineTo(centerX + 5 - stride, centerY + 16);
+  context.stroke();
+  context.strokeStyle = "#382f29";
+  context.lineWidth = 4;
   context.beginPath();
-  context.roundRect(centerX - 6, centerY - 1 + bounce, 12, 9, 3);
-  context.fill();
-  context.strokeStyle = "rgb(228 215 174 / 58%)";
-  context.lineWidth = 0.8;
-  context.beginPath();
-  context.moveTo(centerX, centerY + 1 + bounce);
-  context.lineTo(centerX, centerY + 7 + bounce);
+  context.moveTo(centerX - 7 + stride, centerY + 16);
+  context.lineTo(centerX - 2 + stride, centerY + 16);
+  context.moveTo(centerX + 3 - stride, centerY + 16);
+  context.lineTo(centerX + 8 - stride, centerY + 16);
   context.stroke();
 
-  context.fillStyle = "#d6a77c";
+  const pack = context.createLinearGradient(centerX - 12, centerY - 5, centerX - 4, centerY + 9);
+  pack.addColorStop(0, "#b38653");
+  pack.addColorStop(1, "#745337");
+  context.fillStyle = pack;
   context.beginPath();
-  context.ellipse(centerX, headY, 5.2, 6, 0, 0, Math.PI * 2);
+  context.roundRect(centerX - 12, centerY - 3 + bounce, 8, 13, 3);
   context.fill();
-  context.fillStyle = "#554639";
+  context.strokeStyle = "rgb(244 211 155 / 55%)";
+  context.lineWidth = 1;
   context.beginPath();
-  context.arc(centerX, headY - 3, 5.4, Math.PI, Math.PI * 2);
-  context.lineTo(centerX + 6, headY - 1);
-  context.quadraticCurveTo(centerX, headY - 4, centerX - 6, headY - 1);
+  context.moveTo(centerX - 9, centerY + 1 + bounce);
+  context.lineTo(centerX - 6, centerY + 1 + bounce);
+  context.stroke();
+
+  const coat = context.createLinearGradient(centerX - 8, centerY - 3, centerX + 8, centerY + 11);
+  coat.addColorStop(0, "#718363");
+  coat.addColorStop(0.55, "#596d52");
+  coat.addColorStop(1, "#465942");
+  context.fillStyle = coat;
+  context.beginPath();
+  context.moveTo(centerX - 7, centerY - 5 + bounce);
+  context.quadraticCurveTo(centerX, centerY - 9 + bounce, centerX + 7, centerY - 4 + bounce);
+  context.lineTo(centerX + 9, centerY + 8 + bounce);
+  context.quadraticCurveTo(centerX, centerY + 14 + bounce, centerX - 9, centerY + 8 + bounce);
   context.closePath();
   context.fill();
-  context.fillStyle = "#d9bd7a";
+  context.strokeStyle = "rgb(220 213 172 / 48%)";
+  context.lineWidth = 1;
   context.beginPath();
-  context.ellipse(centerX, headY - 4, 7, 2.1, 0, Math.PI, Math.PI * 2);
-  context.fill();
-  context.fillRect(centerX - 6, headY - 4, 12, 1.5);
+  context.moveTo(centerX, centerY - 1 + bounce);
+  context.lineTo(centerX, centerY + 8 + bounce);
+  context.stroke();
 
-  context.fillStyle = "#3d3d31";
+  const faceY = centerY - 10 + bounce;
+  context.fillStyle = "#d9aa81";
   context.beginPath();
-  context.arc(centerX + 2, headY, 0.8, 0, Math.PI * 2);
+  context.ellipse(centerX, faceY, 6.2, 7.1, 0, 0, Math.PI * 2);
   context.fill();
+  context.fillStyle = "#5c4637";
+  context.beginPath();
+  context.arc(centerX, faceY - 3, 6.2, Math.PI, Math.PI * 2);
+  context.quadraticCurveTo(centerX + 7, faceY - 3, centerX + 5.6, faceY - 1);
+  context.quadraticCurveTo(centerX, faceY - 4, centerX - 5.6, faceY - 1);
+  context.closePath();
+  context.fill();
+
+  context.fillStyle = "#c8b27f";
+  context.beginPath();
+  context.ellipse(centerX, faceY - 5, 13, 3.3, 0, 0, Math.PI * 2);
+  context.fill();
+  const hat = context.createLinearGradient(centerX - 8, faceY - 17, centerX + 8, faceY - 7);
+  hat.addColorStop(0, "#758064");
+  hat.addColorStop(1, "#4e604a");
+  context.fillStyle = hat;
+  context.beginPath();
+  context.moveTo(centerX - 8, faceY - 7);
+  context.quadraticCurveTo(centerX - 5, faceY - 18, centerX, faceY - 19);
+  context.quadraticCurveTo(centerX + 7, faceY - 17, centerX + 8, faceY - 7);
+  context.closePath();
+  context.fill();
+  context.strokeStyle = "rgb(234 221 184 / 57%)";
+  context.lineWidth = 1;
+  context.beginPath();
+  context.moveTo(centerX - 10, faceY - 5);
+  context.quadraticCurveTo(centerX, faceY - 2, centerX + 10, faceY - 5);
+  context.stroke();
+
+  context.fillStyle = "#4b3b32";
+  context.beginPath();
+  context.arc(centerX + (player.facing === "left" ? -2 : 2), faceY, 0.9, 0, Math.PI * 2);
+  context.fill();
+}
+
+function drawVignette(width, height, pixelRatio) {
+  context.save();
+  context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+  const vignette = context.createRadialGradient(
+    width / 2,
+    height / 2,
+    Math.min(width, height) * 0.28,
+    width / 2,
+    height / 2,
+    Math.max(width, height) * 0.72,
+  );
+  vignette.addColorStop(0, "rgb(35 48 36 / 0%)");
+  vignette.addColorStop(1, "rgb(29 39 31 / 23%)");
+  context.fillStyle = vignette;
+  context.fillRect(0, 0, width, height);
+  context.restore();
+}
+
+function drawPaintedLeaf(x, y, length, width, angle, color) {
+  context.save();
+  context.translate(x, y);
+  context.rotate(angle);
+  const leaf = context.createLinearGradient(0, -width, 0, width);
+  leaf.addColorStop(0, "#718d72");
+  leaf.addColorStop(0.52, color);
+  leaf.addColorStop(1, "#3f665e");
+  context.beginPath();
+  context.moveTo(-length / 2, 0);
+  context.quadraticCurveTo(-length / 4, -width, length / 2, 0);
+  context.quadraticCurveTo(-length / 4, width, -length / 2, 0);
+  context.fillStyle = leaf;
+  context.fill();
+  context.strokeStyle = "rgb(36 69 60 / 57%)";
+  context.lineWidth = 1;
+  context.stroke();
+  context.strokeStyle = "rgb(213 221 177 / 50%)";
+  context.lineWidth = 0.8;
+  context.beginPath();
+  context.moveTo(-length / 2 + 2, 0);
+  context.quadraticCurveTo(0, -1.5, length / 2 - 2, 0);
+  context.stroke();
+  context.restore();
+}
+
+function drawEdgeFoliage(width, height, pixelRatio) {
+  context.save();
+  context.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+  context.globalAlpha = 0.82;
+
+  const sprays = [
+    { x: 0, y: height + 5, dx: 1, dy: -0.7, count: 8 },
+    { x: width, y: height + 5, dx: -1, dy: -0.68, count: 8 },
+    { x: -3, y: 1, dx: 1, dy: 0.58, count: 6 },
+    { x: width + 3, y: 0, dx: -0.9, dy: 0.7, count: 6 },
+  ];
+  const colors = ["#4c746b", "#547d6b", "#60816a", "#416b65"];
+
+  for (const spray of sprays) {
+    const endX = spray.x + spray.dx * 77;
+    const endY = spray.y + spray.dy * 61;
+    context.strokeStyle = "#355b54";
+    context.lineWidth = 4;
+    context.lineCap = "round";
+    context.beginPath();
+    context.moveTo(spray.x, spray.y);
+    context.quadraticCurveTo(spray.x + spray.dx * 35, spray.y + spray.dy * 20, endX, endY);
+    context.stroke();
+
+    for (let leaf = 0; leaf < spray.count; leaf += 1) {
+      const progress = (leaf + 1) / (spray.count + 1);
+      const centerX = spray.x + (endX - spray.x) * progress;
+      const centerY = spray.y + (endY - spray.y) * progress;
+      const side = leaf % 2 === 0 ? -1 : 1;
+      const branchAngle = Math.atan2(spray.dy, spray.dx);
+      const leafAngle = branchAngle + side * 0.78;
+      const size = 27 + (leaf % 3) * 5;
+      const offset = side * (13 + (leaf % 2) * 4);
+      drawPaintedLeaf(
+        centerX - Math.sin(branchAngle) * offset,
+        centerY + Math.cos(branchAngle) * offset,
+        size,
+        size * 0.35,
+        leafAngle,
+        colors[leaf % colors.length],
+      );
+    }
+  }
+  context.restore();
 }
 
 function resizeCanvas() {
@@ -695,13 +1214,13 @@ function drawMap(time) {
   context.clearRect(0, 0, width, height);
 
   const sea = context.createLinearGradient(0, 0, width, height);
-  sea.addColorStop(0, "#5b8b8b");
-  sea.addColorStop(0.55, "#477b80");
-  sea.addColorStop(1, "#3d6c74");
+  sea.addColorStop(0, "#648584");
+  sea.addColorStop(0.48, "#567a7b");
+  sea.addColorStop(1, "#496e70");
   context.fillStyle = sea;
   context.fillRect(0, 0, width, height);
 
-  const tileSize = Math.min(width / 18, height / 8.5) * zoomLevel;
+  const tileSize = Math.min(width / 17, height / 8.2) * zoomLevel;
   const worldScale = tileSize / TILE_SIZE;
   const offsetX = width / 2 - (player.pixelX + 0.5) * tileSize;
   const offsetY = height / 2 - (player.pixelY + 0.5) * tileSize;
@@ -714,89 +1233,131 @@ function drawMap(time) {
     pixelRatio * offsetY,
   );
 
-  const leftTile = Math.max(0, Math.floor(-offsetX / tileSize) - 1);
-  const rightTile = Math.min(MAP_WIDTH - 1, Math.ceil((width - offsetX) / tileSize) + 1);
-  const topTile = Math.max(0, Math.floor(-offsetY / tileSize) - 1);
-  const bottomTile = Math.min(MAP_HEIGHT - 1, Math.ceil((height - offsetY) / tileSize) + 1);
+  const leftTile = Math.max(0, Math.floor(-offsetX / tileSize) - 2);
+  const rightTile = Math.min(MAP_WIDTH - 1, Math.ceil((width - offsetX) / tileSize) + 2);
+  const topTile = Math.max(0, Math.floor(-offsetY / tileSize) - 2);
+  const bottomTile = Math.min(MAP_HEIGHT - 1, Math.ceil((height - offsetY) / tileSize) + 2);
+
   for (let y = topTile; y <= bottomTile; y += 1) {
     for (let x = leftTile; x <= rightTile; x += 1) {
-      drawTile(x, y, map[y][x], time);
+      if (mapContent.tiles[y][x] === "water") drawWaterRipple(x, y, time);
     }
   }
 
+  drawIsland();
+  for (let y = topTile; y <= bottomTile; y += 1) {
+    for (let x = leftTile; x <= rightTile; x += 1) {
+      drawTile(x, y, mapContent.tiles[y][x]);
+    }
+  }
+
+  for (let zone = 0; zone <= Math.min(questIndex, QUEST_STEPS.length - 1); zone += 1) {
+    drawTrail(zone);
+  }
   for (const [x, y] of TREE_POSITIONS) {
-    if (x >= leftTile && x <= rightTile && y >= topTile && y <= bottomTile) {
-      drawPalmTree(x, y, time);
+    if (x >= leftTile - 1 && x <= rightTile + 1 && y >= topTile - 1 && y <= bottomTile + 1) {
+      drawTree(x, y, time);
     }
   }
   for (const [x, y] of ROCK_POSITIONS) {
-    if (x >= leftTile && x <= rightTile && y >= topTile && y <= bottomTile) {
+    if (x >= leftTile - 1 && x <= rightTile + 1 && y >= topTile - 1 && y <= bottomTile + 1) {
       drawBoulder(x, y);
     }
   }
-  for (let index = 0; index < FEATURES.length; index += 1) {
-    const [x, y] = FEATURES[index].position;
-    if (x >= leftTile && x <= rightTile && y >= topTile && y <= bottomTile) {
-      drawLandmark(FEATURES[index], index, time);
+  for (const [x, y] of BRUSH_POSITIONS) {
+    if (x >= leftTile - 1 && x <= rightTile + 1 && y >= topTile - 1 && y <= bottomTile + 1) {
+      drawFern(x, y, time);
     }
   }
-  for (const position of SHELL_POSITIONS) {
-    if (
-      !collectedShells.has(keyFor(position))
-      && position[0] >= leftTile
-      && position[0] <= rightTile
-      && position[1] >= topTile
-      && position[1] <= bottomTile
-    ) {
-      drawShell(...position, time);
+  for (const prop of SCENE_PROPS) {
+    const [x, y] = prop.position;
+    if (x >= leftTile - 1 && x <= rightTile + 1 && y >= topTile - 1 && y <= bottomTile + 1) {
+      drawProp(prop);
     }
   }
-  drawChest(time);
-  drawCrab(time);
+
+  const firstVisibleGate = Math.max(1, Math.floor(leftTile / ZONE_WIDTH));
+  const lastVisibleGate = Math.min(
+    QUEST_STEPS.length - 1,
+    Math.ceil(rightTile / ZONE_WIDTH),
+  );
+  for (let boundary = firstVisibleGate; boundary <= lastVisibleGate; boundary += 1) {
+    drawGate(boundary, time);
+  }
+
+  for (let index = 0; index <= questIndex && index < QUEST_STEPS.length; index += 1) {
+    const step = QUEST_STEPS[index];
+    const [x, y] = step.position;
+    if (x >= leftTile - 2 && x <= rightTile + 2 && y >= topTile - 2 && y <= bottomTile + 2) {
+      drawLandmark(step, index, time, index < questIndex);
+    }
+  }
+  if (
+    MORI_POSITION[0] >= leftTile - 2
+    && MORI_POSITION[0] <= rightTile + 2
+    && MORI_POSITION[1] >= topTile - 2
+    && MORI_POSITION[1] <= bottomTile + 2
+  ) {
+    drawGuide(time);
+  }
+
   drawPlayer(time);
+  drawEdgeFoliage(width, height, pixelRatio);
+  drawVignette(width, height, pixelRatio);
 }
 
-function buildLandmarkList() {
+function renderJournalArchive() {
   landmarks.replaceChildren();
-  FEATURES.forEach((feature, index) => {
+  for (let index = 0; index < questIndex; index += 1) {
+    const step = QUEST_STEPS[index];
     const item = document.createElement("li");
-    item.dataset.feature = String(index);
-    item.innerHTML = `<span class="landmark-number">${index + 1}</span><span>${feature.name}</span>`;
+    item.className = "discovered";
+
+    const number = document.createElement("span");
+    number.className = "landmark-number";
+    number.textContent = String(index + 1).padStart(2, "0");
+
+    const title = document.createElement("span");
+    title.className = "landmark-title";
+    title.textContent = step.name;
+
+    const type = document.createElement("span");
+    type.className = "landmark-status";
+    type.textContent = step.type === "history" ? "HISTORY" : "PERK";
+    item.append(number, title, type);
     landmarks.append(item);
-  });
-  updateJournal();
+  }
 }
 
 function updateJournal() {
-  document.querySelector("#perk-count").textContent = `${unlocked.size} / ${FEATURES.length}`;
-  document.querySelector("#perk-progress").style.width = `${(unlocked.size / FEATURES.length) * 100}%`;
-  document.querySelector("#shell-count").textContent = `${collectedShells.size} / ${SHELL_POSITIONS.length}`;
+  const historyFound = QUEST_STEPS.slice(0, questIndex).filter((step) => step.type === "history").length;
+  const perksFound = QUEST_STEPS.slice(0, questIndex).filter((step) => step.type === "perk").length;
+  document.querySelector("#clue-count").textContent = `${questIndex} / ${QUEST_STEPS.length}`;
+  document.querySelector("#clue-progress").style.width = `${(questIndex / QUEST_STEPS.length) * 100}%`;
+  document.querySelector("#perk-count").textContent = `${perksFound} / ${FEATURES.length}`;
+  document.querySelector("#history-count").textContent = `${historyFound} / ${HISTORY_STEPS.length}`;
+  document.querySelector("#archive-count").textContent = `${questIndex} FOUND`;
 
-  for (const item of landmarks.children) {
-    const index = Number(item.dataset.feature);
-    item.classList.toggle("discovered", unlocked.has(index));
-    item.classList.toggle("nearby", positionIs([player.x, player.y], FEATURES[index].position));
-    let status = item.querySelector(".landmark-status");
-    if (unlocked.has(index)) {
-      if (!status) {
-        status = document.createElement("span");
-        status.className = "landmark-status";
-        status.textContent = "✓";
-        item.append(status);
-      }
-    } else if (status) {
-      status.remove();
-    }
+  const nextStep = QUEST_STEPS[questIndex];
+  const chapterTag = document.querySelector("#chapter-tag");
+  const currentClue = document.querySelector("#current-clue");
+  if (nextStep) {
+    chapterTag.textContent = nextStep.type === "history"
+      ? `ORIGINS · ${historyFound + 1} OF ${HISTORY_STEPS.length}`
+      : `WINDOWS 11 · ${perksFound + 1} OF ${FEATURES.length}`;
+    currentClue.textContent = nextStep.clue;
+  } else {
+    chapterTag.textContent = "JOURNEY COMPLETE";
+    currentClue.textContent = "All five history notes and all nine Windows 11 discoveries are safely in your journal.";
   }
 
-  const location = document.querySelector("#location-label");
-  if (positionIs([player.x, player.y], CRAB_POSITION)) {
-    location.textContent = "Byte's beach";
-  } else if (positionIs([player.x, player.y], CHEST_POSITION)) {
-    location.textContent = "The treasure nook";
+  renderJournalArchive();
+  const activePosition = nextStep ? nextStep.position : null;
+  if (activePosition && positionIs([player.x, player.y], activePosition)) {
+    document.querySelector("#location-label").textContent = "A field note is waiting";
   } else {
-    const nearbyFeature = FEATURES.find((feature) => positionIs([player.x, player.y], feature.position));
-    location.textContent = nearbyFeature ? nearbyFeature.name : "The sunny island";
+    const zone = Math.max(0, Math.min(GLADE_NAMES.length - 1, Math.floor(player.x / ZONE_WIDTH)));
+    document.querySelector("#location-label").textContent = GLADE_NAMES[zone];
   }
 }
 
@@ -804,10 +1365,10 @@ function showToast(message) {
   toast.textContent = message;
   toast.classList.add("visible");
   window.clearTimeout(toastTimeout);
-  toastTimeout = window.setTimeout(() => toast.classList.remove("visible"), 2100);
+  toastTimeout = window.setTimeout(() => toast.classList.remove("visible"), 2500);
 }
 
-function openModal({ title, description, art = "✦", eyebrow = "ISLAND DISCOVERY" }) {
+function openModal({ title, description, art = "✧", eyebrow = "FIELD NOTE", locked = false }) {
   modalTitle.textContent = title;
   modalDescription.textContent = description;
   modalArt.textContent = art;
@@ -818,134 +1379,224 @@ function openModal({ title, description, art = "✦", eyebrow = "ISLAND DISCOVER
   quizArea.hidden = true;
   tryCard.hidden = true;
   modalAction.hidden = true;
+  modalAction.textContent = "Continue exploring";
+  modalClose.hidden = locked;
+  modalLocked = locked;
   modalBackdrop.hidden = false;
-  document.querySelector("#modal-close").focus();
 }
 
 function closeModal() {
+  if (modalLocked) return;
   modalBackdrop.hidden = true;
-  openedFeature = null;
+  modalStepIndex = -1;
+  modalStage = "";
 }
 
-function showFeature(feature, index) {
-  openedFeature = index;
-  openModal({
-    title: feature.name,
-    description: feature.description,
-    art: unlocked.has(index) ? "✓" : "✦",
-    eyebrow: unlocked.has(index) ? "PERK UNLOCKED" : `PERK ${index + 1} · ISLAND DISCOVERY`,
-  });
-  tryText.textContent = feature.tryIt;
-  tryCard.hidden = false;
-
-  if (unlocked.has(index)) {
-    answerFeedback.textContent = "Already added to your explorer's journal. Nice find!";
-    answerFeedback.classList.add("success");
-    modalAction.hidden = false;
-    return;
-  }
-
+function showQuestion(question, choices, answer, onCorrect) {
   quizArea.hidden = false;
-  questionText.textContent = feature.question;
-  feature.choices.forEach((choice, choiceIndex) => {
+  questionText.textContent = question;
+  answerList.replaceChildren();
+  answerFeedback.textContent = "";
+  answerFeedback.classList.remove("success");
+
+  choices.forEach((choice, choiceIndex) => {
     const button = document.createElement("button");
     button.className = "answer-button";
     button.type = "button";
-    button.innerHTML = `<span class="answer-number">${choiceIndex + 1}</span><span></span>`;
-    button.lastElementChild.textContent = choice;
-    button.addEventListener("click", () => answerFeature(feature, index, choiceIndex));
+    const number = document.createElement("span");
+    number.className = "answer-number";
+    number.textContent = String(choiceIndex + 1);
+    const label = document.createElement("span");
+    label.textContent = choice;
+    button.append(number, label);
+    button.addEventListener("click", () => {
+      for (const option of answerList.querySelectorAll(".answer-button")) {
+        option.classList.remove("incorrect", "correct");
+      }
+      if (choiceIndex !== answer) {
+        button.classList.add("incorrect");
+        answerFeedback.textContent = "Not quite. Read the field note above once more, then give it another try.";
+        return;
+      }
+
+      button.classList.add("correct");
+      for (const option of answerList.querySelectorAll(".answer-button")) option.disabled = true;
+      answerFeedback.textContent = "";
+      answerFeedback.classList.add("success");
+      onCorrect();
+    });
     answerList.append(button);
   });
 }
 
-function answerFeature(feature, index, choiceIndex) {
-  if (choiceIndex !== feature.answer) {
-    answerFeedback.textContent = `Not quite! The answer is: ${feature.choices[feature.answer]}. Give it another try!`;
-    return;
-  }
+function showIntro() {
+  modalStage = "intro";
+  openModal({
+    title: "Welcome to Whisperwood",
+    description: "A trail of field notes winds through these woods. Each one tells a piece of Windows history or reveals a Windows 11 feature. Read each note and answer its check-in to open the next gate; future clues stay hidden until then. Move with WASD or the arrows, and press E to examine.",
+    art: "✧",
+    eyebrow: "BEFORE YOU SET OUT",
+    locked: true,
+  });
+  showQuestion(
+    "What opens the next gate?",
+    [
+      "Find a note, read it, and answer its check-in",
+      "Walk through the brambles",
+      "Guess where the last clue is",
+      "Press Escape to skip ahead",
+    ],
+    0,
+    () => {
+      modalStage = "intro-complete";
+      answerFeedback.textContent = "That's it. One note at a time, and the trail will open.";
+      answerFeedback.classList.add("success");
+      modalAction.textContent = "Begin the hunt";
+      modalAction.hidden = false;
+    },
+  );
+}
 
-  unlocked.add(index);
+function showQuestStep(step, index) {
+  modalStepIndex = index;
+  modalStage = "lesson";
+  openModal({
+    title: step.name,
+    description: step.description,
+    art: step.symbol,
+    eyebrow: step.type === "history"
+      ? `WINDOWS HISTORY · NOTE ${index + 1} OF ${QUEST_STEPS.length}`
+      : `WINDOWS 11 FIELD GUIDE · NOTE ${index + 1} OF ${QUEST_STEPS.length}`,
+    locked: true,
+  });
+  tryText.textContent = step.takeaway;
+  tryCard.hidden = false;
+  modalAction.textContent = "I've read the note";
+  modalAction.hidden = false;
+}
+
+function showReview(step, index) {
+  modalStage = "review";
+  openModal({
+    title: step.name,
+    description: step.description,
+    art: step.symbol,
+    eyebrow: step.type === "history" ? "JOURNAL · WINDOWS HISTORY" : "JOURNAL · WINDOWS 11 PERK",
+  });
+  tryText.textContent = step.takeaway;
+  tryCard.hidden = false;
+  modalAction.textContent = "Close field note";
+  modalAction.hidden = false;
+  modalStepIndex = index;
+}
+
+function showGuide() {
+  const line = MORI_DIALOGUE[guideChats % MORI_DIALOGUE.length];
+  guideChats += 1;
+  modalStage = "guide";
+  openModal({
+    title: "Mori the moth",
+    description: line,
+    art: "✧",
+    eyebrow: "A FRIENDLY REMINDER",
+  });
+  modalAction.textContent = "Back to the trail";
+  modalAction.hidden = false;
+}
+
+function completeStep(step, index) {
+  if (index !== questIndex || completedSteps.has(index)) return;
+  completedSteps.add(index);
+  questIndex += 1;
   updateJournal();
-  modalEyebrow.textContent = "PERK UNLOCKED";
-  modalArt.textContent = "✓";
-  answerFeedback.textContent = "Correct! Added to your explorer's journal.";
+  modalStage = "step-complete";
+  answerFeedback.textContent = step.type === "history"
+    ? "Added to your Windows history timeline."
+    : `${step.name} added to your Windows 11 field guide.`;
   answerFeedback.classList.add("success");
-  for (const button of answerList.querySelectorAll("button")) button.disabled = true;
+  modalAction.textContent = questIndex === QUEST_STEPS.length ? "Finish the story trail" : "Open the next trail";
   modalAction.hidden = false;
 
-  if (unlocked.size === FEATURES.length) {
-    answerFeedback.textContent = "Every Windows 11 perk discovered! You're an island legend.";
-    showToast("All nine Windows 11 perks discovered!");
+  if (questIndex === QUEST_STEPS.length) {
+    showToast("Every field note recovered. Whisperwood is yours to explore!");
   }
 }
 
+function advanceModal() {
+  if (modalStage === "lesson") {
+    const step = QUEST_STEPS[modalStepIndex];
+    if (!step) return;
+    modalStage = "quiz";
+    modalAction.hidden = true;
+    showQuestion(step.question, step.choices, step.answer, () => completeStep(step, modalStepIndex));
+    const firstAnswer = answerList.querySelector("button");
+    if (firstAnswer) firstAnswer.focus();
+    return;
+  }
+
+  if (modalStage === "intro-complete" || modalStage === "step-complete") {
+    modalLocked = false;
+    modalBackdrop.hidden = true;
+    modalStage = "";
+    modalStepIndex = -1;
+    heldKeys.clear();
+    return;
+  }
+
+  modalLocked = false;
+  closeModal();
+}
+
 function interact() {
+  if (!modalBackdrop.hidden) return;
+
   const position = [player.x, player.y];
-  const featureIndex = FEATURES.findIndex((feature) => positionIs(position, feature.position));
-  if (featureIndex !== -1) {
-    showFeature(FEATURES[featureIndex], featureIndex);
+  const stepIndex = QUEST_STEPS.findIndex((step) => positionIs(position, step.position));
+  if (stepIndex === questIndex) {
+    showQuestStep(QUEST_STEPS[stepIndex], stepIndex);
     return;
   }
-  if (positionIs(position, CRAB_POSITION)) {
-    const line = CRAB_DIALOGUE[crabChats % CRAB_DIALOGUE.length];
-    crabChats += 1;
-    openModal({
-      title: "Byte the crab",
-      description: line,
-      art: "🦀",
-      eyebrow: "BEACH BUDDY",
-    });
-    modalAction.hidden = false;
+  if (stepIndex !== -1 && stepIndex < questIndex) {
+    showReview(QUEST_STEPS[stepIndex], stepIndex);
     return;
   }
-  if (positionIs(position, CHEST_POSITION)) {
-    if (chestOpened) {
-      openModal({
-        title: "A very shiny trophy",
-        description: "The chest is empty now, but Byte says you can keep the lid. Island Champion looks good on you!",
-        art: "🏆",
-        eyebrow: "TREASURE FOUND",
-      });
-    } else if (collectedShells.size < SHELL_POSITIONS.length) {
-      const remaining = SHELL_POSITIONS.length - collectedShells.size;
-      openModal({
-        title: "Shell-locked treasure",
-        description: `The chest needs all five shiny shells to pop open. You still need ${remaining} ${remaining === 1 ? "shell" : "shells"}. Go explore the beaches!`,
-        art: "🧰",
-        eyebrow: "MYSTERIOUS CHEST",
-      });
-    } else {
-      chestOpened = true;
-      openModal({
-        title: "Golden Mouse Trophy!",
-        description: "The chest pops open! You found the legendary Golden Mouse Trophy. You are now the Island Champion!",
-        art: "🏆",
-        eyebrow: "TREASURE FOUND",
-      });
-      showToast("Island Champion badge earned!");
-    }
-    modalAction.hidden = false;
+  if (positionIs(position, MORI_POSITION)) {
+    showGuide();
     return;
   }
-  showToast("Nothing here yet. Wander over to a glowing perk marker!");
+  showToast("Follow the current journal clue. The next note won't appear until this one is learned.");
 }
 
 function movePlayer(dx, dy) {
   const nextX = player.x + dx;
   const nextY = player.y + dy;
   if (nextX < 0 || nextY < 0 || nextX >= MAP_WIDTH || nextY >= MAP_HEIGHT) return;
-  if (["water", "tree", "rock"].includes(map[nextY][nextX])) return;
+  if (["water", "tree", "rock"].includes(mapContent.tiles[nextY][nextX])) return;
+
+  const currentZone = Math.floor(player.x / ZONE_WIDTH);
+  const nextZone = Math.floor(nextX / ZONE_WIDTH);
+  if (nextZone > questIndex) {
+    if (performance.now() - lastGateToastAt > 900) {
+      showToast("The gate is sealed. Recover and learn the current field note first.");
+      lastGateToastAt = performance.now();
+    }
+    return;
+  }
+  if (nextZone !== currentZone && Math.abs(nextY - GATE_Y) > 2) {
+    if (performance.now() - lastGateToastAt > 900) {
+      showToast("The old gate opens at the mossy trail crossing.");
+      lastGateToastAt = performance.now();
+    }
+    return;
+  }
 
   player.x = nextX;
   player.y = nextY;
-  const shellKey = keyFor([nextX, nextY]);
-  if (SHELL_POSITIONS.some((position) => keyFor(position) === shellKey) && !collectedShells.has(shellKey)) {
-    collectedShells.add(shellKey);
-    updateJournal();
-    showToast(`Shiny shell collected! ${collectedShells.size} / ${SHELL_POSITIONS.length}`);
-  } else {
-    updateJournal();
-  }
+  if (dx < 0) player.facing = "left";
+  else if (dx > 0) player.facing = "right";
+  else if (dy < 0) player.facing = "up";
+  else player.facing = "down";
+  updateJournal();
 }
 
 function directionFor(key) {
@@ -1006,13 +1657,14 @@ async function toggleFullscreen() {
 function animate(time) {
   if (time - lastFrameAt > 1000 / 60) {
     if (modalBackdrop.hidden && heldKeys.size && time - lastMoveAt > 125) {
-      const direction = directionFor([...heldKeys].at(-1));
+      const keys = [...heldKeys];
+      const direction = directionFor(keys[keys.length - 1]);
       if (direction) movePlayer(...direction);
       lastMoveAt = time;
     }
 
-    player.pixelX += (player.x - player.pixelX) * 0.35;
-    player.pixelY += (player.y - player.pixelY) * 0.35;
+    player.pixelX += (player.x - player.pixelX) * 0.32;
+    player.pixelY += (player.y - player.pixelY) * 0.32;
     if (Math.abs(player.x - player.pixelX) < 0.01) player.pixelX = player.x;
     if (Math.abs(player.y - player.pixelY) < 0.01) player.pixelY = player.y;
     drawMap(time);
@@ -1023,14 +1675,17 @@ function animate(time) {
 
 document.addEventListener("keydown", (event) => {
   const key = event.key;
-  if (key === "Escape" && !modalBackdrop.hidden) {
-    closeModal();
-    return;
-  }
   if (!modalBackdrop.hidden) {
-    if (key === "Enter" && !modalAction.hidden) modalAction.click();
+    if (key === "Escape") {
+      event.preventDefault();
+      if (!modalLocked) closeModal();
+    } else if (key === "Enter" && !modalAction.hidden) {
+      event.preventDefault();
+      advanceModal();
+    }
     return;
   }
+
   if (key.toLowerCase() === "f") {
     event.preventDefault();
     toggleFullscreen();
@@ -1065,20 +1720,30 @@ if ("ResizeObserver" in window) {
   canvasObserver.observe(canvas);
 }
 document.querySelector("#interact-button").addEventListener("click", interact);
-document.querySelector("#modal-close").addEventListener("click", closeModal);
-document.querySelector("#modal-action").addEventListener("click", closeModal);
+modalClose.addEventListener("click", closeModal);
+modalAction.addEventListener("click", advanceModal);
 fullscreenButton.addEventListener("click", toggleFullscreen);
 zoomOutButton.addEventListener("click", () => setZoom(zoomLevel - ZOOM_STEP));
 zoomInButton.addEventListener("click", () => setZoom(zoomLevel + ZOOM_STEP));
 document.querySelector("#help-button").addEventListener("click", () => {
+  modalStage = "help";
   openModal({
-    title: "How to explore",
-    description: "Use WASD or the arrow keys to walk; the camera follows you across the island. Walk over shells to collect them, then press E on a perk marker, Byte the crab, or the treasure chest. Use + and − to zoom, or F to maximize the game.",
-    art: "🧭",
-    eyebrow: "QUICK FIELD GUIDE",
+    title: "How to follow the trail",
+    description: "Use WASD or the arrow keys to explore and press E when you reach the current field note. Read the note, then answer its question to unlock the next gate. Future clues stay hidden until you learn the one you're on. Use + and - to zoom, or F to maximize the game.",
+    art: "⌖",
+    eyebrow: "FIELD GUIDE",
   });
+  modalAction.textContent = "Back to the trail";
   modalAction.hidden = false;
 });
+
+groundTexture.addEventListener("load", () => {
+  groundPattern = context.createPattern(groundTexture, "repeat");
+});
+groundTexture.addEventListener("error", () => {
+  console.error("Could not load the Whisperwood ground texture.", groundTexture.src);
+});
+groundTexture.src = "assets/whisperwood-ground.png";
 
 for (const button of document.querySelectorAll("[data-move]")) {
   const key = button.dataset.move;
@@ -1096,8 +1761,9 @@ for (const button of document.querySelectorAll("[data-move]")) {
   button.addEventListener("lostpointercapture", () => heldKeys.delete(key));
 }
 
-buildLandmarkList();
+updateJournal();
 updateZoomControls();
 updateFullscreenButton();
 resizeCanvas();
+showIntro();
 window.requestAnimationFrame(animate);

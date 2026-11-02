@@ -1150,3 +1150,446 @@ kbd {
     font-size: 24px;
   }
 }
+
+:root {
+  --surface: #e9e2cd;
+  --surface-light: #f3edda;
+  --text-muted: #747864;
+  --mint: #7d8d68;
+  --gold: #a98955;
+  color: #333a30;
+  background: #22271f;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 18% 0%, rgb(91 105 75 / 23%), transparent 42%),
+    linear-gradient(145deg, #252b22, #1d211c 68%, #29291f);
+}
+
+.app-shell {
+  max-width: 1600px;
+}
+
+.topbar {
+  border-bottom-color: rgb(223 218 192 / 15%);
+}
+
+.brand,
+h1,
+.panel-title h2,
+.game-modal h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.brand-icon {
+  border-color: rgb(201 180 131 / 44%);
+  background: rgb(201 180 131 / 10%);
+  color: #d7c294;
+}
+
+.brand-accent,
+h1 span {
+  color: #c9b17d;
+}
+
+.top-note {
+  color: #c1c2af;
+}
+
+.world-heading {
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-weight: 600;
+  letter-spacing: -0.8px;
+}
+
+.world-heading h1 {
+  color: #eee8d8;
+}
+
+.world-heading h1 span {
+  color: #d3bd8e;
+}
+
+.world-badge {
+  border-color: rgb(203 185 144 / 30%);
+  border-radius: 20px;
+  background: rgb(203 185 144 / 9%);
+  color: #e0d1aa;
+}
+
+.world-frame {
+  border: 1px solid #82795e;
+  border-radius: 17px;
+  background: #557776;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 31%), 0 2px 0 rgb(255 246 220 / 10%) inset;
+}
+
+.world-caption {
+  height: 38px;
+  border-bottom-color: rgb(239 232 205 / 20%);
+  background: linear-gradient(90deg, rgb(41 55 44 / 88%), rgb(50 65 51 / 78%));
+  color: #eee8d5;
+}
+
+.coordinate-readout {
+  color: #d4d7c5;
+}
+
+#island-map {
+  height: auto;
+  aspect-ratio: 1.86 / 1;
+  background: #557776;
+}
+
+.map-tools {
+  top: 49px;
+  border-color: rgb(241 232 204 / 25%);
+  border-radius: 12px;
+  background: rgb(43 53 43 / 78%);
+}
+
+.map-tip {
+  border-top-color: rgb(239 232 205 / 18%);
+  background: #30392e;
+  color: #dddcc9;
+}
+
+.tip-key,
+kbd {
+  border-color: #69705b;
+  background: #414a38;
+  color: #f1ead6;
+}
+
+.controls-row > p {
+  color: #c5c6b5;
+}
+
+.controls-row > p span {
+  color: #8d967d;
+}
+
+.movement-pad .move-button {
+  border-color: #5a634f;
+  background: #30382d;
+  color: #eee8d7;
+}
+
+.interact-button,
+.primary-button {
+  border-color: #b49b69;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #8a805f, #6e7658);
+  color: #fff9e9;
+}
+
+.quest-panel {
+  border: 1px solid #a69d7f;
+  border-radius: 17px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(255 255 255 / 27%), transparent 46%),
+    linear-gradient(155deg, #f0ead8, #ddd6bf 74%);
+  box-shadow: 0 16px 38px rgb(0 0 0 / 18%), 0 1px 0 rgb(255 255 255 / 50%) inset;
+  color: #3c4437;
+}
+
+.panel-icon {
+  border-color: rgb(134 129 91 / 35%);
+  background: #d8d2ba;
+  color: #697655;
+}
+
+.panel-title .eyebrow {
+  color: #787b64;
+}
+
+.panel-title h2 {
+  color: #394033;
+}
+
+.progress-card {
+  border-color: #c0b89b;
+  background: rgb(195 189 164 / 31%);
+}
+
+.progress-line,
+.collectible-line {
+  color: #505844;
+}
+
+.progress-line strong,
+.collectible-line strong {
+  color: #343c31;
+}
+
+.progress-track {
+  background: #c3bea8;
+}
+
+.progress-track span {
+  background: linear-gradient(90deg, #a18b5f, #7d906d);
+}
+
+.collectible-line {
+  border-top-color: rgb(112 115 87 / 20%);
+}
+
+.shell-icon {
+  color: #a38651;
+}
+
+.current-clue-card {
+  margin-top: 15px;
+  padding: 13px 14px;
+  border: 1px solid #c1b58f;
+  border-radius: 11px;
+  background: #f5efdE;
+  box-shadow: 0 4px 12px rgb(77 68 45 / 6%);
+}
+
+.current-clue-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.current-clue-heading .eyebrow {
+  margin: 0;
+  color: #777a62;
+  font-size: 8px;
+}
+
+.chapter-tag {
+  color: #7c815f;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-align: right;
+}
+
+#current-clue {
+  margin: 0;
+  color: #4a503d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.landmark-section {
+  margin-top: 17px;
+}
+
+.section-heading h3 {
+  color: #454b3b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 12px;
+}
+
+.section-heading > span {
+  color: #777b64;
+}
+
+.landmark-list {
+  max-height: 240px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 4px;
+  overflow: auto;
+  padding-right: 3px;
+  scrollbar-color: #a39a7d transparent;
+  scrollbar-width: thin;
+}
+
+.landmark-list li {
+  min-height: 31px;
+  gap: 8px;
+  padding: 5px 7px;
+  border: 1px solid rgb(144 137 103 / 15%);
+  background: rgb(255 253 241 / 34%);
+  color: #535a46;
+  font-size: 10px;
+}
+
+.landmark-list li.discovered {
+  color: #45533f;
+}
+
+.landmark-number {
+  border-color: #c5bd9e;
+  background: #e4dec9;
+  color: #666b51;
+}
+
+.discovered .landmark-number {
+  border-color: #9baa84;
+  background: #d8e0cb;
+  color: #596c4d;
+}
+
+.landmark-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.landmark-status {
+  color: #747a5e;
+  font-size: 7px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.buddy-card {
+  border-color: #c4b58b;
+  background: rgb(193 180 141 / 19%);
+}
+
+.buddy-avatar {
+  border: 1px solid #c4b58b;
+  background: #e8dfc7;
+  color: #8c7650;
+  font-size: 20px;
+}
+
+.buddy-card strong {
+  color: #4d5540;
+}
+
+.buddy-card p,
+.hardware-note {
+  color: #717661;
+}
+
+.buddy-sparkle,
+.footer-note span {
+  color: #a48a55;
+}
+
+.footer-note {
+  color: #b2b4a1;
+}
+
+.toast {
+  border-color: #aaa17f;
+  background: #eee6d0;
+  color: #3d4436;
+}
+
+.modal-backdrop {
+  background: rgb(20 26 20 / 72%);
+}
+
+.game-modal {
+  width: min(520px, 100%);
+  max-height: calc(100dvh - 40px);
+  overflow-y: auto;
+  border-color: #a99a76;
+  border-radius: 18px;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgb(255 255 255 / 38%), transparent 48%),
+    linear-gradient(150deg, #f2ebd8, #e6ddc6);
+  box-shadow: 0 25px 85px rgb(0 0 0 / 45%), 0 1px 0 rgb(255 255 255 / 70%) inset;
+}
+
+.modal-close {
+  color: #505644;
+}
+
+.modal-close:hover {
+  background: rgb(115 122 90 / 14%);
+}
+
+.modal-art {
+  border-color: #c7b98e;
+  background: #e4dcc4;
+  color: #87714d;
+}
+
+.game-modal .eyebrow {
+  color: #777b5e;
+}
+
+.game-modal h2 {
+  color: #363d32;
+}
+
+.modal-description,
+.try-card span {
+  color: #535a49;
+}
+
+.try-card {
+  border-color: #c5bd9a;
+  background: rgb(151 155 116 / 11%);
+}
+
+.try-card strong {
+  color: #6a7754;
+}
+
+.quiz-area h3 {
+  color: #3f4739;
+}
+
+.answer-button {
+  border-color: #bdb69c;
+  background: rgb(255 253 241 / 48%);
+  color: #3e4538;
+}
+
+.answer-button:hover,
+.answer-button:focus-visible {
+  border-color: #8b8b65;
+  background: #f7f0dd;
+}
+
+.answer-button.incorrect {
+  border-color: #af8066;
+  background: #f0ded0;
+}
+
+.answer-button.correct {
+  border-color: #84966e;
+  background: #e0e8d5;
+}
+
+.answer-number {
+  border-color: #c5bd9e;
+  color: #626951;
+}
+
+.answer-feedback {
+  color: #9a744e;
+}
+
+.answer-feedback.success {
+  color: #5f7652;
+}
+
+.app-shell:fullscreen {
+  background: #22271f;
+}
+
+.app-shell:fullscreen #island-map {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+@media (max-width: 540px) {
+  #island-map {
+    aspect-ratio: 1.55 / 1;
+  }
+
+  .current-clue-card {
+    padding: 11px 12px;
+  }
+
+  .landmark-list {
+    max-height: 190px;
+  }
+}

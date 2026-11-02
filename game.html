@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#191d19">
-  <title>Perk Island — Windows 11 Perk Quest</title>
+  <meta name="theme-color" content="#252b21">
+  <title>Whisperwood — The Windows Story Trail</title>
   <link rel="stylesheet" href="style.css">
   <script src="game.js" defer></script>
 </head>
 <body>
   <main class="app-shell">
     <header class="topbar">
-      <a class="brand" href="#" aria-label="Perk Island home">
-        <span class="brand-icon" aria-hidden="true">✦</span>
-        <span>PERK<span class="brand-accent"> ISLAND</span></span>
+      <a class="brand" href="#" aria-label="Whisperwood home">
+        <span class="brand-icon" aria-hidden="true">✧</span>
+        <span>WHISPER<span class="brand-accent">WOOD</span></span>
       </a>
-      <div class="top-note"><span class="live-dot"></span> A tiny world of big upgrades</div>
+      <div class="top-note"><span class="live-dot"></span> A storybook scavenger hunt</div>
       <div class="top-actions">
         <button class="icon-button fullscreen-button" id="fullscreen-button" type="button"
           aria-label="Enter fullscreen" title="Enter fullscreen"><span aria-hidden="true">⛶</span></button>
@@ -23,20 +23,20 @@
       </div>
     </header>
 
-    <section class="game-layout" aria-label="Perk Island game">
+    <section class="game-layout" aria-label="Whisperwood scavenger hunt">
       <div class="world-column">
         <div class="world-heading">
           <div>
-            <p class="eyebrow">YOUR NEXT ADVENTURE</p>
-            <h1>Windows 11 <span>Perk Quest</span></h1>
+            <p class="eyebrow">FOLLOW THE HIDDEN TRAIL</p>
+            <h1>Windows <span>Story Trail</span></h1>
           </div>
-          <div class="world-badge"><span aria-hidden="true">☀</span> SUNNY · DAY 1</div>
+          <div class="world-badge"><span aria-hidden="true">✦</span> 14 FIELD NOTES · 9 PERKS</div>
         </div>
 
         <div class="world-frame">
           <div class="world-caption">
-            <span><span class="live-dot"></span> PERK ISLAND</span>
-            <span class="coordinate-readout" id="location-label">The sandy shore</span>
+            <span><span class="live-dot"></span> WHISPERWOOD</span>
+            <span class="coordinate-readout" id="location-label">The fern shore</span>
           </div>
           <div class="map-tools" aria-label="Map zoom controls">
             <button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
@@ -44,11 +44,11 @@
             <button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
           </div>
           <canvas id="island-map" width="1376" height="544"
-            aria-label="Top-down map of Perk Island. Use WASD or arrow keys to explore."></canvas>
+            aria-label="Illustrated woodland island. Use WASD or arrow keys to explore and find the current clue."></canvas>
           <div class="map-tip" id="map-tip">
-            <span class="tip-key">E</span> interact
+            <span class="tip-key">E</span> examine clue
             <span class="tip-separator">·</span>
-            <span class="tip-key">W A S D</span> explore
+            <span class="tip-key">W A S D</span> wander
           </div>
         </div>
 
@@ -59,55 +59,67 @@
             <button type="button" class="move-button move-down" data-move="ArrowDown" aria-label="Move down">↓</button>
             <button type="button" class="move-button move-right" data-move="ArrowRight" aria-label="Move right">→</button>
           </div>
-          <p>WASD / arrows to move <span>·</span> E to interact</p>
+          <p>WASD / arrows to wander <span>·</span> E to examine</p>
           <button type="button" class="interact-button" id="interact-button">
-            <span aria-hidden="true">✦</span> Interact <kbd>E</kbd>
+            <span aria-hidden="true">✧</span> Examine <kbd>E</kbd>
           </button>
         </div>
       </div>
 
-      <aside class="quest-panel" aria-label="Explorer's journal">
+      <aside class="quest-panel" aria-label="Explorer's field journal">
         <div class="panel-title">
-          <div class="panel-icon" aria-hidden="true">▤</div>
-          <div><p class="eyebrow">EXPLORER'S JOURNAL</p><h2>Your adventure</h2></div>
+          <div class="panel-icon" aria-hidden="true">✎</div>
+          <div><p class="eyebrow">FIELD JOURNAL</p><h2>Trail notes</h2></div>
         </div>
 
         <section class="progress-card" aria-label="Game progress">
-          <div class="progress-line"><span>Perks discovered</span><strong id="perk-count">0 / 9</strong></div>
-          <div class="progress-track"><span id="perk-progress"></span></div>
+          <div class="progress-line"><span>Field notes recovered</span><strong id="clue-count">0 / 14</strong></div>
+          <div class="progress-track"><span id="clue-progress"></span></div>
           <div class="collectible-line">
-            <span><span class="shell-icon" aria-hidden="true">✧</span> Shiny shells</span>
-            <strong id="shell-count">0 / 5</strong>
+            <span><span class="shell-icon" aria-hidden="true">✦</span> Windows 11 perks</span>
+            <strong id="perk-count">0 / 9</strong>
+          </div>
+          <div class="collectible-line history-count-line">
+            <span>Windows history</span>
+            <strong id="history-count">0 / 5</strong>
           </div>
         </section>
 
-        <section class="landmark-section">
-          <div class="section-heading"><h3>Island landmarks</h3><span>9 PERKS</span></div>
+        <section class="current-clue-card" aria-label="Current clue">
+          <div class="current-clue-heading">
+            <span class="eyebrow">YOUR NEXT LEAD</span>
+            <span class="chapter-tag" id="chapter-tag">ORIGINS</span>
+          </div>
+          <p id="current-clue">A message from the very first Windows waits among the old roots.</p>
+        </section>
+
+        <section class="landmark-section" aria-label="Collected field notes">
+          <div class="section-heading"><h3>Collected notes</h3><span id="archive-count">0 FOUND</span></div>
           <ol class="landmark-list" id="landmark-list"></ol>
         </section>
 
         <div class="buddy-card">
-          <div class="buddy-avatar" aria-hidden="true">🦀</div>
-          <div><strong>Byte the crab</strong><p>Knows all the best shell puns.</p></div>
+          <div class="buddy-avatar" aria-hidden="true">✧</div>
+          <div><strong>Mori the moth</strong><p>Ask for a gentle trail reminder.</p></div>
           <span class="buddy-sparkle" aria-hidden="true">✦</span>
         </div>
 
         <p class="hardware-note">
-          Some perks need compatible hardware or a newer Windows update.
+          Some Windows 11 features need compatible hardware or a newer update.
         </p>
       </aside>
     </section>
-    <footer class="footer-note">Made for curious explorers <span>✦</span> No downloads, no fuss.</footer>
+    <footer class="footer-note">A little history, hidden in the woods <span>✦</span> Made for curious explorers.</footer>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
     <div class="modal-backdrop" id="modal-backdrop" hidden>
       <section class="game-modal" id="game-modal" role="dialog" aria-modal="true"
         aria-labelledby="modal-title" aria-describedby="modal-description">
         <button class="modal-close" id="modal-close" type="button" aria-label="Close">×</button>
-        <div class="modal-art" id="modal-art" aria-hidden="true">✦</div>
-        <p class="eyebrow" id="modal-eyebrow">ISLAND DISCOVERY</p>
+        <div class="modal-art" id="modal-art" aria-hidden="true">✧</div>
+        <p class="eyebrow" id="modal-eyebrow">FIELD NOTE</p>
         <h2 id="modal-title"></h2>
         <p class="modal-description" id="modal-description"></p>
-        <div class="try-card" id="try-card" hidden><strong>Try it out</strong><span id="try-text"></span></div>
+        <div class="try-card" id="try-card" hidden><strong>Keep this in mind</strong><span id="try-text"></span></div>
         <div class="quiz-area" id="quiz-area">
           <h3 id="question-text"></h3>
           <div class="answer-list" id="answer-list"></div>
