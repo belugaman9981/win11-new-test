@@ -1,6 +1,7 @@
 FEATURES = (
     {
         "name": "A fresh Start",
+        "position": (21, 13),
         "description": (
             "Windows 11 gives Start and the taskbar a redesigned, centered "
             "look, with a simpler pinned-apps and recommendations layout."
@@ -17,6 +18,7 @@ FEATURES = (
     },
     {
         "name": "Snap Layouts",
+        "position": (11, 10),
         "description": (
             "Snap Layouts make it easier to arrange several apps side by side "
             "using ready-made window arrangements."
@@ -33,6 +35,7 @@ FEATURES = (
     },
     {
         "name": "Widgets",
+        "position": (6, 6),
         "description": (
             "The Widgets board brings glanceable information, such as weather "
             "and news, together in one personalized panel."
@@ -49,6 +52,7 @@ FEATURES = (
     },
     {
         "name": "File Explorer tabs",
+        "position": (15, 4),
         "description": (
             "File Explorer tabs let you keep multiple folders in one window "
             "instead of opening a separate window for every folder."
@@ -65,6 +69,7 @@ FEATURES = (
     },
     {
         "name": "Focus sessions",
+        "position": (23, 4),
         "description": (
             "Focus sessions in the Clock app give you a timed work session "
             "and can help reduce distractions."
@@ -76,6 +81,7 @@ FEATURES = (
     },
     {
         "name": "Voice Access",
+        "position": (32, 6),
         "description": (
             "Voice Access lets you control your PC and dictate text with "
             "spoken commands. Language availability varies."
@@ -92,6 +98,7 @@ FEATURES = (
     },
     {
         "name": "Dynamic Lighting",
+        "position": (36, 10),
         "description": (
             "For compatible accessories, Dynamic Lighting lets you manage "
             "RGB lighting from Windows settings."
@@ -108,6 +115,7 @@ FEATURES = (
     },
     {
         "name": "Windows Studio Effects",
+        "position": (29, 12),
         "description": (
             "On supported hardware, Studio Effects can enhance video calls "
             "with effects such as background blur or automatic framing."
@@ -124,6 +132,7 @@ FEATURES = (
     },
     {
         "name": "Auto HDR",
+        "position": (18, 8),
         "description": (
             "On a supported HDR display, Auto HDR can add HDR color and "
             "brightness to some older games that were made for SDR."
@@ -140,30 +149,101 @@ FEATURES = (
     },
 )
 
+MAP_WIDTH = 43
+MAP_HEIGHT = 17
+START_POSITION = (21, 13)
+TREE_TILES = {
+    (4, 4), (8, 3), (10, 5), (12, 7), (4, 9), (7, 11),
+    (15, 12), (17, 3), (19, 5), (25, 6), (27, 8), (31, 4),
+    (35, 7), (39, 8), (33, 13), (25, 14), (12, 14), (5, 13),
+}
+ROCK_TILES = {(9, 8), (13, 5), (26, 10), (34, 12), (30, 3)}
+
 
 def ask_question(feature):
     while True:
         for number, choice in enumerate(feature["choices"], start=1):
             print(f"  {number}. {choice}")
-        answer = input("Your answer (1-4, or Q to quit): ").strip().lower()
+        answer = input("Your answer (1-4): ").strip().lower()
         if answer in ("q", "quit"):
             return None
         if answer in ("1", "2", "3", "4"):
             return int(answer) == feature["answer"]
-        print("Please enter 1, 2, 3, 4, or Q.")
+        print("Please enter 1, 2, 3, or 4.")
+
+
+def build_island():
+    island = []
+    center_x = MAP_WIDTH // 2
+    center_y = MAP_HEIGHT // 2
+    for y in range(MAP_HEIGHT):
+        row = []
+        for x in range(MAP_WIDTH):
+            inside_island = (
+                ((x - center_x) / 20) ** 2 + ((y - center_y) / 8) ** 2 <= 1
+            )
+            row.append("." if inside_island else "~")
+        island.append(row)
+
+    hub = (center_x, center_y)
+    routes = [(START_POSITION, hub)]
+    routes.extend((hub, feature["position"]) for feature in FEATURES)
+    for start, destination in routes:
+        x, y = start
+        target_x, target_y = destination
+        while x != target_x:
+            island[y][x] = "="
+            x += 1 if target_x > x else -1
+        while y != target_y:
+            island[y][x] = "="
+            y += 1 if target_y > y else -1
+        island[y][x] = "="
+
+    for x, y in TREE_TILES:
+        island[y][x] = "T"
+    for x, y in ROCK_TILES:
+        island[y][x] = "#"
+    for number, feature in enumerate(FEATURES, start=1):
+        x, y = feature["position"]
+        island[y][x] = str(number)
+    return island
+
+
+def draw_map(island, player, unlocked):
+    print("\n" + "=" * 58)
+    print("                    PERK ISLAND")
+    print("=" * 58)
+    for y, row in enumerate(island):
+        visible_row = []
+        for x, tile in enumerate(row):
+            if (x, y) == player:
+                visible_row.append("@")
+            elif tile.isdigit() and int(tile) in unlocked:
+                visible_row.append("*")
+            else:
+                visible_row.append(tile)
+        print("".join(visible_row))
+    print("~ water  . grass  = trail  T tree  # rock  1-9 perk  * unlocked  @ you")
+
+
+def show_feature(feature):
+    print(f"\n--- {feature['name']} ---")
+    print(feature["description"])
+    print(f"Try it: {feature['try_it']}")
+    print(feature["question"])
 
 
 def play_game():
-    print("=" * 54)
-    print("          THE WINDOWS 11 PERK QUEST")
-    print("=" * 54)
+    print("=" * 58)
+    print("                 THE WINDOWS 11 PERK QUEST")
+    print("=" * 58)
     print(
-        "Travel through nine stops to discover standout Windows 11 "
-        "features that Windows 10 did not include in this form."
+        "Explore a small island, find its nine perk markers, and answer "
+        "questions to unlock what each feature does."
     )
     print(
-        "Answer each question to earn a point. Press Q any time you want "
-        "to end your tour."
+        "Move with W/A/S/D, interact with E, and quit with Q. Trees, rocks, "
+        "and water block your path."
     )
     print(
         "Feature availability can depend on your Windows update, region, "
@@ -171,30 +251,62 @@ def play_game():
     )
     input("\nPress Enter when you're ready to start...")
 
-    score = 0
-    for stop, feature in enumerate(FEATURES, start=1):
-        print(f"\n--- STOP {stop} OF {len(FEATURES)}: {feature['name']} ---")
-        print(feature["description"])
-        print(f"Try it: {feature['try_it']}")
-        print(feature["question"])
+    island = build_island()
+    player_x, player_y = START_POSITION
+    unlocked = set()
 
+    while True:
+        draw_map(island, (player_x, player_y), unlocked)
+        print(f"Perks discovered: {len(unlocked)}/{len(FEATURES)}")
+        command = input("What would you like to do? ").strip().lower()
+        if command in ("q", "quit"):
+            print("\nThanks for exploring Perk Island!")
+            break
+        if command in ("w", "a", "s", "d"):
+            offsets = {"w": (0, -1), "a": (-1, 0), "s": (0, 1), "d": (1, 0)}
+            offset_x, offset_y = offsets[command]
+            next_x = player_x + offset_x
+            next_y = player_y + offset_y
+            if not (0 <= next_x < MAP_WIDTH and 0 <= next_y < MAP_HEIGHT):
+                print("That way is blocked.")
+                continue
+            tile = island[next_y][next_x]
+            if tile in ("~", "T", "#"):
+                print("That way is blocked.")
+            else:
+                player_x, player_y = next_x, next_y
+            continue
+        if command != "e":
+            print("Use W, A, S, D to move, E to interact, or Q to quit.")
+            continue
+
+        tile = island[player_y][player_x]
+        if not tile.isdigit():
+            print("There isn't a perk marker here. Explore the island to find one.")
+            continue
+
+        feature_number = int(tile)
+        feature = FEATURES[feature_number - 1]
+        if feature_number in unlocked:
+            print(f"You already unlocked {feature['name']}. Keep exploring!")
+            continue
+
+        show_feature(feature)
         correct = ask_question(feature)
         if correct is None:
-            print("\nTour ended early. Thanks for exploring!")
+            print("\nThanks for exploring Perk Island!")
             break
         if correct:
-            score += 1
+            unlocked.add(feature_number)
             print("Correct! Perk unlocked.")
+            if len(unlocked) == len(FEATURES):
+                print("\nYou found and unlocked every perk on the island!")
         else:
             correct_choice = feature["choices"][feature["answer"] - 1]
             print(f"Not quite. The answer is: {correct_choice}")
+            print("The marker stays here. You can try again whenever you like.")
 
-        if stop < len(FEATURES):
-            input("Press Enter for the next stop...")
-    else:
-        print("\nYou completed the Windows 11 Perk Quest!")
-
-    print(f"Your score: {score}/{len(FEATURES)}")
+    print(f"Perks discovered: {len(unlocked)}/{len(FEATURES)}")
     print("Keep exploring, and enjoy your Windows upgrade!")
 
 
