@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10172b">
+  <meta name="theme-color" content="#191d19">
   <title>Perk Island — Windows 11 Perk Quest</title>
   <link rel="stylesheet" href="style.css">
   <script src="game.js" defer></script>
@@ -16,7 +16,11 @@
         <span>PERK<span class="brand-accent"> ISLAND</span></span>
       </a>
       <div class="top-note"><span class="live-dot"></span> A tiny world of big upgrades</div>
-      <button class="icon-button" id="help-button" type="button" aria-label="Show controls">?</button>
+      <div class="top-actions">
+        <button class="icon-button fullscreen-button" id="fullscreen-button" type="button"
+          aria-label="Enter fullscreen" title="Enter fullscreen"><span aria-hidden="true">⛶</span></button>
+        <button class="icon-button" id="help-button" type="button" aria-label="Show controls" title="Show controls">?</button>
+      </div>
     </header>
 
     <section class="game-layout" aria-label="Perk Island game">
@@ -33,6 +37,11 @@
           <div class="world-caption">
             <span><span class="live-dot"></span> PERK ISLAND</span>
             <span class="coordinate-readout" id="location-label">The sandy shore</span>
+          </div>
+          <div class="map-tools" aria-label="Map zoom controls">
+            <button type="button" id="zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+            <span id="zoom-label" aria-live="polite">125%</span>
+            <button type="button" id="zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
           </div>
           <canvas id="island-map" width="1376" height="544"
             aria-label="Top-down map of Perk Island. Use WASD or arrow keys to explore."></canvas>
@@ -89,25 +98,24 @@
       </aside>
     </section>
     <footer class="footer-note">Made for curious explorers <span>✦</span> No downloads, no fuss.</footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="modal-backdrop" id="modal-backdrop" hidden>
+      <section class="game-modal" id="game-modal" role="dialog" aria-modal="true"
+        aria-labelledby="modal-title" aria-describedby="modal-description">
+        <button class="modal-close" id="modal-close" type="button" aria-label="Close">×</button>
+        <div class="modal-art" id="modal-art" aria-hidden="true">✦</div>
+        <p class="eyebrow" id="modal-eyebrow">ISLAND DISCOVERY</p>
+        <h2 id="modal-title"></h2>
+        <p class="modal-description" id="modal-description"></p>
+        <div class="try-card" id="try-card" hidden><strong>Try it out</strong><span id="try-text"></span></div>
+        <div class="quiz-area" id="quiz-area">
+          <h3 id="question-text"></h3>
+          <div class="answer-list" id="answer-list"></div>
+          <p class="answer-feedback" id="answer-feedback" aria-live="polite"></p>
+        </div>
+        <button class="primary-button modal-action" id="modal-action" type="button" hidden>Continue exploring</button>
+      </section>
+    </div>
   </main>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <div class="modal-backdrop" id="modal-backdrop" hidden>
-    <section class="game-modal" id="game-modal" role="dialog" aria-modal="true"
-      aria-labelledby="modal-title" aria-describedby="modal-description">
-      <button class="modal-close" id="modal-close" type="button" aria-label="Close">×</button>
-      <div class="modal-art" id="modal-art" aria-hidden="true">✦</div>
-      <p class="eyebrow" id="modal-eyebrow">ISLAND DISCOVERY</p>
-      <h2 id="modal-title"></h2>
-      <p class="modal-description" id="modal-description"></p>
-      <div class="try-card" id="try-card" hidden><strong>Try it out</strong><span id="try-text"></span></div>
-      <div class="quiz-area" id="quiz-area">
-        <h3 id="question-text"></h3>
-        <div class="answer-list" id="answer-list"></div>
-        <p class="answer-feedback" id="answer-feedback" aria-live="polite"></p>
-      </div>
-      <button class="primary-button modal-action" id="modal-action" type="button" hidden>Continue exploring</button>
-    </section>
-  </div>
 </body>
 </html>

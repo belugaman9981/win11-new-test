@@ -14,9 +14,12 @@ python test.py
 
 You can also open `game.html` directly in a modern browser. Use `W`, `A`, `S`,
 `D` or the arrow keys to walk, and press `E` or click **Interact** near a
-character, chest, or perk. On smaller screens, use the on-screen arrow buttons.
-Walk over all five shells to unlock the chest and claim the Golden Mouse Trophy.
+character, chest, or perk. The camera follows your explorer; use `+` and `−`
+or the map buttons to adjust zoom. Click the fullscreen button or press `F` to
+expand the game. On smaller screens, use the on-screen arrow buttons. Walk over
+all five shells to unlock the chest and claim the Golden Mouse Trophy.
 
-The game is made with local HTML, CSS, and JavaScript and does not need
-additional packages. Feature availability can depend on your Windows version,
-region, and PC hardware.
+The map uses detailed, high-DPI canvas rendering and adapts to fullscreen and
+smaller screens. The game is made with local HTML, CSS, and JavaScript and
+does not need additional packages. Feature availability can depend on your
+Windows version, region, and PC hardware.
