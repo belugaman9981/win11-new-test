@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10172b">
+  <title>Perk Island — Windows 11 Perk Quest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Perk Island home">
+        <span class="brand-icon" aria-hidden="true">✦</span>
+        <span>PERK<span class="brand-accent"> ISLAND</span></span>
+      </a>
+      <div class="top-note"><span class="live-dot"></span> A tiny world of big upgrades</div>
+      <button class="icon-button" id="help-button" type="button" aria-label="Show controls">?</button>
+    </header>
+
+    <section class="game-layout" aria-label="Perk Island game">
+      <div class="world-column">
+        <div class="world-heading">
+          <div>
+            <p class="eyebrow">YOUR NEXT ADVENTURE</p>
+            <h1>Windows 11 <span>Perk Quest</span></h1>
+          </div>
+          <div class="world-badge"><span aria-hidden="true">☀</span> SUNNY · DAY 1</div>
+        </div>
+
+        <div class="world-frame">
+          <div class="world-caption">
+            <span><span class="live-dot"></span> PERK ISLAND</span>
+            <span class="coordinate-readout" id="location-label">The sandy shore</span>
+          </div>
+          <canvas id="island-map" width="1376" height="544"
+            aria-label="Top-down map of Perk Island. Use WASD or arrow keys to explore."></canvas>
+          <div class="map-tip" id="map-tip">
+            <span class="tip-key">E</span> interact
+            <span class="tip-separator">·</span>
+            <span class="tip-key">W A S D</span> explore
+          </div>
+        </div>
+
+        <div class="controls-row" aria-label="Movement controls">
+          <div class="movement-pad">
+            <button type="button" class="move-button move-up" data-move="ArrowUp" aria-label="Move up">↑</button>
+            <button type="button" class="move-button move-left" data-move="ArrowLeft" aria-label="Move left">←</button>
+            <button type="button" class="move-button move-down" data-move="ArrowDown" aria-label="Move down">↓</button>
+            <button type="button" class="move-button move-right" data-move="ArrowRight" aria-label="Move right">→</button>
+          </div>
+          <p>WASD / arrows to move <span>·</span> E to interact</p>
+          <button type="button" class="interact-button" id="interact-button">
+            <span aria-hidden="true">✦</span> Interact <kbd>E</kbd>
+          </button>
+        </div>
+      </div>
+
+      <aside class="quest-panel" aria-label="Explorer's journal">
+        <div class="panel-title">
+          <div class="panel-icon" aria-hidden="true">▤</div>
+          <div><p class="eyebrow">EXPLORER'S JOURNAL</p><h2>Your adventure</h2></div>
+        </div>
+
+        <section class="progress-card" aria-label="Game progress">
+          <div class="progress-line"><span>Perks discovered</span><strong id="perk-count">0 / 9</strong></div>
+          <div class="progress-track"><span id="perk-progress"></span></div>
+          <div class="collectible-line">
+            <span><span class="shell-icon" aria-hidden="true">✧</span> Shiny shells</span>
+            <strong id="shell-count">0 / 5</strong>
+          </div>
+        </section>
+
+        <section class="landmark-section">
+          <div class="section-heading"><h3>Island landmarks</h3><span>9 PERKS</span></div>
+          <ol class="landmark-list" id="landmark-list"></ol>
+        </section>
+
+        <div class="buddy-card">
+          <div class="buddy-avatar" aria-hidden="true">🦀</div>
+          <div><strong>Byte the crab</strong><p>Knows all the best shell puns.</p></div>
+          <span class="buddy-sparkle" aria-hidden="true">✦</span>
+        </div>
+
+        <p class="hardware-note">
+          Some perks need compatible hardware or a newer Windows update.
+        </p>
+      </aside>
+    </section>
+    <footer class="footer-note">Made for curious explorers <span>✦</span> No downloads, no fuss.</footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <section class="game-modal" id="game-modal" role="dialog" aria-modal="true"
+      aria-labelledby="modal-title" aria-describedby="modal-description">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Close">×</button>
+      <div class="modal-art" id="modal-art" aria-hidden="true">✦</div>
+      <p class="eyebrow" id="modal-eyebrow">ISLAND DISCOVERY</p>
+      <h2 id="modal-title"></h2>
+      <p class="modal-description" id="modal-description"></p>
+      <div class="try-card" id="try-card" hidden><strong>Try it out</strong><span id="try-text"></span></div>
+      <div class="quiz-area" id="quiz-area">
+        <h3 id="question-text"></h3>
+        <div class="answer-list" id="answer-list"></div>
+        <p class="answer-feedback" id="answer-feedback" aria-live="polite"></p>
+      </div>
+      <button class="primary-button modal-action" id="modal-action" type="button" hidden>Continue exploring</button>
+    </section>
+  </div>
+</body>
+</html>

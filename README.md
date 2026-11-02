@@ -1,21 +1,22 @@
 # Windows 11 Perk Quest
 
-A small, interactive Python exploration game. Wander around a Terraria-inspired
-island, find nine perk markers, and answer a question at each one to learn about
-standout features introduced or notably enhanced in Windows 11 compared with
-Windows 10.
+Explore a colorful, Terraria-inspired island right in your browser. Wander
+around, collect shiny shells, meet Byte the crab, find all nine Windows 11 perk
+markers, and open the treasure chest.
 
 ## Play
 
-Run the game with Python 3:
+Open the game in a new browser window by running:
 
 ```text
 python test.py
 ```
 
-Use `W`, `A`, `S`, and `D` to move around the island, and `E` to interact with
-a perk marker, Byte the crab, or the treasure chest. Answer perk quizzes with
-`1`, `2`, `3`, or `4`; enter `Q` to quit. Pick up the five shiny shells as you
-walk over them, then visit the chest to claim the Golden Mouse Trophy. Trees,
-rocks, and water block movement. Features such as Auto HDR, Dynamic Lighting,
-and Windows Studio Effects may require compatible hardware.
+You can also open `game.html` directly in a modern browser. Use `W`, `A`, `S`,
+`D` or the arrow keys to walk, and press `E` or click **Interact** near a
+character, chest, or perk. On smaller screens, use the on-screen arrow buttons.
+Walk over all five shells to unlock the chest and claim the Golden Mouse Trophy.
+
+The game is made with local HTML, CSS, and JavaScript and does not need
+additional packages. Feature availability can depend on your Windows version,
+region, and PC hardware.
