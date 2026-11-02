@@ -158,6 +158,15 @@ TREE_TILES = {
     (35, 7), (39, 8), (33, 13), (25, 14), (12, 14), (5, 13),
 }
 ROCK_TILES = {(9, 8), (13, 5), (26, 10), (34, 12), (30, 3)}
+SHELL_TILES = {(3, 6), (8, 14), (16, 6), (26, 3), (38, 10)}
+CRAB_POSITION = (22, 8)
+CHEST_POSITION = (21, 8)
+CRAB_DIALOGUE = (
+    "Byte the crab says: 'Welcome to the island! I accept shells and compliments.'",
+    "Byte the crab says: 'I tried Snap Layouts. Now my sandcastles have nine windows.'",
+    "Byte the crab says: 'A shell a day keeps the seagulls... actually, no it doesn't.'",
+    "Byte the crab says: 'You look very shell-f confident, explorer!'",
+)
 
 
 def ask_question(feature):
@@ -203,13 +212,19 @@ def build_island():
         island[y][x] = "T"
     for x, y in ROCK_TILES:
         island[y][x] = "#"
+    for x, y in SHELL_TILES:
+        island[y][x] = "$"
     for number, feature in enumerate(FEATURES, start=1):
         x, y = feature["position"]
         island[y][x] = str(number)
+    x, y = CRAB_POSITION
+    island[y][x] = "B"
+    x, y = CHEST_POSITION
+    island[y][x] = "C"
     return island
 
 
-def draw_map(island, player, unlocked):
+def draw_map(island, player, unlocked, collected_shells, chest_opened):
     print("\n" + "=" * 58)
     print("                    PERK ISLAND")
     print("=" * 58)
@@ -220,10 +235,17 @@ def draw_map(island, player, unlocked):
                 visible_row.append("@")
             elif tile.isdigit() and int(tile) in unlocked:
                 visible_row.append("*")
+            elif tile == "$" and (x, y) in collected_shells:
+                visible_row.append(".")
+            elif tile == "C" and chest_opened:
+                visible_row.append("c")
             else:
                 visible_row.append(tile)
         print("".join(visible_row))
-    print("~ water  . grass  = trail  T tree  # rock  1-9 perk  * unlocked  @ you")
+    print(
+        "~ water  . grass  = trail  T tree  # rock  $ shell  B Byte  "
+        "C chest  1-9 perk  * unlocked  @ you"
+    )
 
 
 def show_feature(feature):
@@ -243,7 +265,8 @@ def play_game():
     )
     print(
         "Move with W/A/S/D, interact with E, and quit with Q. Trees, rocks, "
-        "and water block your path."
+        "and water block your path. Collect shells, chat with Byte the crab, "
+        "and open the treasure chest!"
     )
     print(
         "Feature availability can depend on your Windows update, region, "
@@ -254,10 +277,20 @@ def play_game():
     island = build_island()
     player_x, player_y = START_POSITION
     unlocked = set()
+    collected_shells = set()
+    chest_opened = False
+    crab_chats = 0
 
     while True:
-        draw_map(island, (player_x, player_y), unlocked)
+        draw_map(
+            island,
+            (player_x, player_y),
+            unlocked,
+            collected_shells,
+            chest_opened,
+        )
         print(f"Perks discovered: {len(unlocked)}/{len(FEATURES)}")
+        print(f"Shells collected: {len(collected_shells)}/{len(SHELL_TILES)}")
         command = input("What would you like to do? ").strip().lower()
         if command in ("q", "quit"):
             print("\nThanks for exploring Perk Island!")
@@ -275,14 +308,41 @@ def play_game():
                 print("That way is blocked.")
             else:
                 player_x, player_y = next_x, next_y
+                if tile == "$" and (next_x, next_y) not in collected_shells:
+                    collected_shells.add((next_x, next_y))
+                    print(
+                        f"Shiny shell collected! "
+                        f"({len(collected_shells)}/{len(SHELL_TILES)})"
+                    )
             continue
         if command != "e":
             print("Use W, A, S, D to move, E to interact, or Q to quit.")
             continue
 
         tile = island[player_y][player_x]
+        if tile == "B":
+            dialogue = CRAB_DIALOGUE[crab_chats % len(CRAB_DIALOGUE)]
+            print(dialogue)
+            crab_chats += 1
+            continue
+        if tile == "C":
+            if chest_opened:
+                print("The chest is empty, but Byte says you can keep the lid.")
+            elif len(collected_shells) < len(SHELL_TILES):
+                remaining = len(SHELL_TILES) - len(collected_shells)
+                print(
+                    f"The chest is locked! Find {remaining} more "
+                    f"{'shell' if remaining == 1 else 'shells'} first."
+                )
+            else:
+                chest_opened = True
+                print(
+                    "The chest pops open! Inside is the legendary "
+                    "Golden Mouse Trophy. You are now the Island Champion!"
+                )
+            continue
         if not tile.isdigit():
-            print("There isn't a perk marker here. Explore the island to find one.")
+            print("Nothing to interact with here. Explore and look for markers!")
             continue
 
         feature_number = int(tile)
@@ -307,6 +367,9 @@ def play_game():
             print("The marker stays here. You can try again whenever you like.")
 
     print(f"Perks discovered: {len(unlocked)}/{len(FEATURES)}")
+    print(f"Shells collected: {len(collected_shells)}/{len(SHELL_TILES)}")
+    if chest_opened:
+        print("Island Champion badge earned: Golden Mouse Trophy!")
     print("Keep exploring, and enjoy your Windows upgrade!")
 
 
